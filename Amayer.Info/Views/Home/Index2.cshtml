@@ -1,0 +1,237 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Index2</title>
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/fontAwesome")
+    @Styles.Render("~/Assets/css/Material")
+</head>
+<body>
+
+    @Html.Partial("_navigation")
+
+    <div class="container">
+        <div id="app">
+            {{message}}
+            qwewqe
+        </div>
+        <div id="app-2">
+            <span v-bind:title="message">
+                Hover your mouse over me for a few seconds to see my dynamically bound title!
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <h1>动态加载表格</h1>
+        <div id="app3">
+            <table class="table table-hover">
+                <tr>
+                    <th class="text-right">序号</th>
+                    <th class="text-right">名字</th>
+                    <th class="text-right">图标</th>
+                    <th class="text-right">控制器</th>
+                    <th class="text-right">视图</th>
+                    <th class="text-right">区域</th>
+                    <th class="text-right">描述</th>
+
+                </tr>
+                <tr v-for="item in admins" v-on:click="editData(item)">
+                    <td>{{item.Id}}</td>
+                    <td>{{item.Name}}</td>
+                    <td>{{item.Icon}}</td>
+                    <td>{{item.Controller}}</td>
+                    <td>{{item.Action}}</td>
+                    <td>{{item.Area}}</td>
+                    <td>{{item.Description}}</td>
+                    <td><button type="button" class="btn btn-primary" v-on:click="editData(item)">编辑</button></td>
+                   
+                        <td><button type="button" class="btn btn-success" v-on:click="deleteData(item)">删除</button></td>
+                    
+
+                </tr>
+            </table>
+            <p>{{admins}}</p>
+            <p>{{admin}}</p>
+            {{ms}}
+            <button v-on:click="getData()">点击加载</button>
+            <div class="row">
+                <div id="add-book" class="col-md-6">
+                    <legend>添加书籍</legend>
+                    <div class="form-group">
+                        <label for="">书名</label>
+                        <input type="text" class="form-control" v-model="admin.Id">
+                    </div>
+                    <div class="form-group">
+                        <label for="">作者</label>
+                        <input type="text" class="form-control" v-model="admin.Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">价格</label>
+                        <input type="text" class="form-control" v-model="admin.Icon">
+                    </div>
+                    <div class="form-group">
+                        <label for="">价格</label>
+                        <input type="text" class="form-control" v-model="admin.Controller">
+                    </div>
+                    <div class="form-group">
+                        <label for="">价格</label>
+                        <input type="text" class="form-control" v-model="admin.Action">
+                    </div>
+                    <div class="form-group">
+                        <label for="">价格</label>
+                        <input type="text" class="form-control" v-model="admin.Area">
+                    </div>
+                    <div class="form-group">
+                        <label for="">价格</label>
+                        <input type="text" class="form-control" v-model="admin.Description">
+                    </div>
+                    <!--事件可以不加（）-->
+                    <button class="btn btn-primary btn-block" v-on:click="addData()">保存</button>
+                </div>
+            </div>
+        </div>	
+        <h1>清单列表</h1>
+        <div class="row">
+            <div id="app4">
+                <input v-model="newTodo">
+                <button v-on:click="addTodo()">添加</button>
+                <ul>
+                    <li v-for="todo in todos">
+                        <span>{{todo.text}}</span>
+                        <button v-on:onclick="removeClick($index)">X</button>
+                    </li>
+                </ul>
+            </div>
+        </div>      
+    </div>
+
+
+    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+    @*<script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>*@
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Assets/js/Material")
+    @*<script src="~/Assets/js/vue.js"></script>*@
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    @*https://npmcdn.com/vue@2.1.7/dist/vue.min.js*@
+    @*<script src="http://cdn.jsdelivr.net/vue/1.0.7/vue.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.7/vue.min.js "></script>*@
+    @*<script src="~/Assets/main.js"></script>*@
+    <script type="text/javascript">
+        //加载material
+        $(function () {
+            $.material.init();
+        });
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello vue',
+
+            }
+        })
+        var app2 = new Vue({
+            el: '#app-2',
+            data: {
+                message: 'You loaded this page on ' + new Date()
+
+            }
+        })
+        var app3 = new Vue({
+            el: '#app3',
+            data: {
+                admins: '',              
+                admin: {
+                    Id :'',
+                    Name:'',
+                    Icon:'',
+                    Controller:'',
+                    Action:'',
+                    Area: '',
+                    Description: ''                
+                },
+                ms: "3123",
+            },
+            beforeCreate: function () {
+                var _self = this;
+
+                $.ajax({
+                    url: "/ajax/getAdmin",
+                    type: "post",
+                    data: {},
+                    success: function (data) {
+                        _self.admins = data;
+
+                    },
+                    error: function () {
+                        alert("通讯失败");
+                    }
+                })
+            },
+            methods: {
+                getData: function () {
+                    var _self = this;
+                    $.ajax({
+                        url: "/ajax/getAdmin",
+                        type: "post",
+                        data: {},
+                        success: function (data) {
+                            _self.admins = data;
+
+                        },
+                        error: function () {
+                            alert("通讯失败");
+                        }
+                    })
+
+                },//
+                editData:function(data){
+                    this.admin = data;
+                },
+                addData: function () {
+                  
+                    //this.admin.Id = this.books.length + 1;
+                    this.admins.push(this.admin);
+                    this.admin = '';
+
+                },
+                deleteData: function (admin) {
+                    this.admins.$remove(admin);
+                              //  $remove
+                }
+
+
+            }
+        })
+        var app4 = new Vue({
+            el: "#app4",
+            data: {
+                newTodo: '',
+                todos: [{ text: 'add some dotos' }, {text:'123'}],
+               
+            },
+            methods: {
+                addTodo: function () {
+                    var _this = this;
+                    var _text = this.newTodo;
+                   // alert(_text);
+                    //if (_text) {
+                    this.dotos.push({ text: _text });
+                        this.newTodo = '';
+                   // }
+                }//
+            }
+        })
+    </script>
+
+
+</body>
+</html>
