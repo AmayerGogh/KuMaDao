@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComMsg\Result.cs" />
     <Compile Include="Com\WebHelper.cs" />
     <Compile Include="CRUD\AdminMenuCRUD.cs" />
     <Compile Include="CRUD\Base.cs" />
