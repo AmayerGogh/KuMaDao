@@ -262,7 +262,6 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Assets\css\materialize.css" />
     <Content Include="Content\simple-line-icons.css" />
-    <Content Include="favicon1.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\Simple-Line-Icons.svg" />

@@ -24,7 +24,7 @@ namespace Amayer.Info.Controllers
             //   var result =  connection.Execute("insert into student values (@Name,@Gender)", new Student { Name = "234", Gender = true });
 
             //var result= conn.Execute("update student set name =@Name where id=@id ", new { Name = "dapper更改的", id = 4 });
-        //  var s  = entity.GetStu();
+           //  var s  = entity.GetStu();
              //this
             return View(model);
         }

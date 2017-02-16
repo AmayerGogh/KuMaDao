@@ -46,7 +46,7 @@ namespace test
             }
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine();
+            Console.WriteLine('123');
 
 
             Console.WriteLine(sb.ToString());
