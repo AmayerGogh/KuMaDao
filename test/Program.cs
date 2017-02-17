@@ -48,7 +48,7 @@ namespace test
             Console.WriteLine();
          
 
-
+               int id =1;
             Console.WriteLine(sb.ToString());
 
             Console.ReadKey();
