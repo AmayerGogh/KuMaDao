@@ -77,4 +77,4 @@ AjaxHelper.prototype.jsonp = function (url, data, callback) {
     this.ajax(url, 'GET', 'jsonp', data, callback)
 }
 
-AjaxHelper.prototype.constructor = AjaxHelper
+AjaxHelper.prototype.constructor = AjaxHelper;

@@ -1,0 +1,12 @@
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\obj\Debug\Amayer.Info.CL.csprojResolveAssemblyReference.cache
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\Amayer.Info.CL.dll.config
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\Amayer.Info.CL.dll
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\Amayer.Info.CL.pdb
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\Dapper.dll
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\EntityFramework.dll
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\EntityFramework.SqlServer.dll
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\Dapper.xml
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\EntityFramework.xml
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\bin\Debug\EntityFramework.SqlServer.xml
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\obj\Debug\Amayer.Info.CL.dll
+E:\Demo\000\root\KuMaDao\Amayer.Info.CL\obj\Debug\Amayer.Info.CL.pdb

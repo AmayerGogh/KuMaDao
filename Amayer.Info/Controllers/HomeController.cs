@@ -18,8 +18,8 @@ namespace Amayer.Info.Controllers
         public ActionResult Index()
         {
             var model = new HomeViewModel();
-           var entity = new AdminMenuCRUD(DapperMsg.DbContext);
-             model.AdminMenus = entity.GetList("AdminMenus");                   
+            var entity = new AdminMenuCRUD(DapperMsg.DbContext);
+            model.AdminMenus = entity.GetList("AdminMenus");                   
 
             //   var result =  connection.Execute("insert into student values (@Name,@Gender)", new Student { Name = "234", Gender = true });
 
