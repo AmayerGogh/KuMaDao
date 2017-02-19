@@ -2,54 +2,23 @@
    NORMALIZATION
 ========================================================================== */
 
-*  {
-  margin: 0;
-  padding: 0;
-}
-
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 [hidden] { display: none; }
-
-ul, ol {
-    list-style: none;
-}
 
 
 /* =============================================================================
    COMMONS
 ========================================================================== */
 
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
-body {
-    background-color: #EEEEEE;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    font-size: x-small;
-    color: #666666;
-}
-
-a {
-    color: #004756;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.wrapper {
-    margin: 0 auto;
-    width: 960px;
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
-[role='header'] {
-    padding-top: 78px;
-    text-align: center;
-    background: #FFF;
-}
-
-.logo,
-.logo-small,
-.ducksboard-logo {
+.logo,.logo-small,
+.ducksboard-logo{
     display: inline-block;
     text-indent: -999em;
     background-image: url(sprite.png);
@@ -353,7 +322,7 @@ section header .m_txt{
 }
 
 .gridster .gs_w {
-    background: #FFF;
+    background: #00a986;
     cursor: pointer;
     -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
@@ -443,21 +412,21 @@ article:not(:last-child),
 @media (max-height:768px) { 
 
      .metro_demo{
-            padding-top: 3%;
+            padding-top: 3% !important;
     }
 }
 @media (min-height: 768px) and (max-height: 992px) {  
      .metro_demo{
-            padding-top: 7%;
+            padding-top: 7% !important;
     }
 }
 @media (min-height:992px) and (max-height: 1200px) {
      .metro_demo{
-            padding-top: 11%;
+            padding-top: 11% !important;
     }
 }
 @media (min-height: 1200px) { 
     .metro_demo{
-            padding-top: 15%;
+            padding-top: 15% !important;
     }
 }

@@ -162,6 +162,8 @@
     <Compile Include="Areas\Admin\ViewModels\ArticleViewModel.cs" />
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CampaignController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
@@ -176,6 +178,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\css\amayer_AndroidClick.css" />
+    <Content Include="bin\Amayer.Info.dll" />
+    <Content Include="bin\Amayer.Info.pdb" />
     <Content Include="img\avtar.jpg" />
     <Content Include="img\baner1.png" />
     <Content Include="img\banner1.png" />
@@ -208,6 +212,7 @@
     <Content Include="lib\AppLikeOnePage\jq22-demo.css" />
     <Content Include="lib\AppLikeOnePage\normalize.css" />
     <Content Include="lib\AppLikeOnePage\onepage.js" />
+    <Content Include="lib\front_main.css" />
     <Content Include="lib\insp\Angular\css\animate.css" />
     <Content Include="lib\insp\Angular\css\bootstrap.min.css" />
     <Content Include="lib\insp\Angular\css\patterns\3.png" />
@@ -218,6 +223,97 @@
     <Content Include="lib\insp\Angular\css\patterns\header-profile.png" />
     <Content Include="lib\insp\Angular\css\patterns\shattered.png" />
     <Content Include="lib\insp\Angular\css\style.css" />
+    <Content Include="lib\insp\css\animate.css" />
+    <Content Include="lib\insp\css\bootstrap.min.css" />
+    <Content Include="lib\insp\css\patterns\3.png" />
+    <Content Include="lib\insp\css\patterns\4.png" />
+    <Content Include="lib\insp\css\patterns\header-profile-skin-1.png" />
+    <Content Include="lib\insp\css\patterns\header-profile-skin-2.png" />
+    <Content Include="lib\insp\css\patterns\header-profile-skin-3.png" />
+    <Content Include="lib\insp\css\patterns\header-profile.png" />
+    <Content Include="lib\insp\css\patterns\shattered.png" />
+    <Content Include="lib\insp\css\plugins\awesome-bootstrap-checkbox\awesome-bootstrap-checkbox.css" />
+    <Content Include="lib\insp\css\plugins\blueimp\css\blueimp-gallery.min.css" />
+    <Content Include="lib\insp\css\plugins\blueimp\img\error.png" />
+    <Content Include="lib\insp\css\plugins\blueimp\img\error.svg" />
+    <Content Include="lib\insp\css\plugins\blueimp\img\loading.gif" />
+    <Content Include="lib\insp\css\plugins\blueimp\img\play-pause.png" />
+    <Content Include="lib\insp\css\plugins\blueimp\img\play-pause.svg" />
+    <Content Include="lib\insp\css\plugins\blueimp\img\video-play.png" />
+    <Content Include="lib\insp\css\plugins\blueimp\img\video-play.svg" />
+    <Content Include="lib\insp\css\plugins\bootstrap-markdown\bootstrap-markdown.min.css" />
+    <Content Include="lib\insp\css\plugins\bootstrapTour\bootstrap-tour.min.css" />
+    <Content Include="lib\insp\css\plugins\c3\c3.min.css" />
+    <Content Include="lib\insp\css\plugins\chartist\chartist.min.css" />
+    <Content Include="lib\insp\css\plugins\chosen\chosen-sprite%402x.png" />
+    <Content Include="lib\insp\css\plugins\chosen\chosen-sprite.png" />
+    <Content Include="lib\insp\css\plugins\chosen\chosen.css" />
+    <Content Include="lib\insp\css\plugins\clockpicker\clockpicker.css" />
+    <Content Include="lib\insp\css\plugins\codemirror\ambiance.css" />
+    <Content Include="lib\insp\css\plugins\codemirror\codemirror.css" />
+    <Content Include="lib\insp\css\plugins\colorpicker\bootstrap-colorpicker.min.css" />
+    <Content Include="lib\insp\css\plugins\cropper\cropper.min.css" />
+    <Content Include="lib\insp\css\plugins\datapicker\datepicker3.css" />
+    <Content Include="lib\insp\css\plugins\dataTables\datatables.min.css" />
+    <Content Include="lib\insp\css\plugins\daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="lib\insp\css\plugins\dropzone\basic.css" />
+    <Content Include="lib\insp\css\plugins\dropzone\dropzone.css" />
+    <Content Include="lib\insp\css\plugins\footable\fonts\footable.svg" />
+    <Content Include="lib\insp\css\plugins\footable\footable.core.css" />
+    <Content Include="lib\insp\css\plugins\fullcalendar\fullcalendar.css" />
+    <Content Include="lib\insp\css\plugins\fullcalendar\fullcalendar.print.css" />
+    <Content Include="lib\insp\css\plugins\iCheck\custom.css" />
+    <Content Include="lib\insp\css\plugins\iCheck\green%402x.png" />
+    <Content Include="lib\insp\css\plugins\iCheck\green.png" />
+    <Content Include="lib\insp\css\plugins\images\bootstrap-colorpicker\alpha-horizontal.png" />
+    <Content Include="lib\insp\css\plugins\images\bootstrap-colorpicker\alpha.png" />
+    <Content Include="lib\insp\css\plugins\images\bootstrap-colorpicker\hue-horizontal.png" />
+    <Content Include="lib\insp\css\plugins\images\bootstrap-colorpicker\hue.png" />
+    <Content Include="lib\insp\css\plugins\images\bootstrap-colorpicker\saturation.png" />
+    <Content Include="lib\insp\css\plugins\images\sprite-skin-flat.png" />
+    <Content Include="lib\insp\css\plugins\images\spritemap%402x.png" />
+    <Content Include="lib\insp\css\plugins\images\spritemap.png" />
+    <Content Include="lib\insp\css\plugins\ionRangeSlider\ion.rangeSlider.css" />
+    <Content Include="lib\insp\css\plugins\ionRangeSlider\ion.rangeSlider.skinFlat.css" />
+    <Content Include="lib\insp\css\plugins\jasny\jasny-bootstrap.min.css" />
+    <Content Include="lib\insp\css\plugins\jqGrid\ui.jqgrid.css" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\animated-overlay.gif" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-icons_222222_256x240.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-icons_454545_256x240.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-icons_888888_256x240.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="lib\insp\css\plugins\jQueryUI\jquery-ui.css" />
+    <Content Include="lib\insp\css\plugins\jsTree\32px.png" />
+    <Content Include="lib\insp\css\plugins\jsTree\40px.png" />
+    <Content Include="lib\insp\css\plugins\jsTree\style.min.css" />
+    <Content Include="lib\insp\css\plugins\jsTree\throbber.gif" />
+    <Content Include="lib\insp\css\plugins\ladda\ladda-themeless.min.css" />
+    <Content Include="lib\insp\css\plugins\morris\morris-0.4.3.min.css" />
+    <Content Include="lib\insp\css\plugins\nouslider\jquery.nouislider.css" />
+    <Content Include="lib\insp\css\plugins\select2\select2.min.css" />
+    <Content Include="lib\insp\css\plugins\slick\ajax-loader.gif" />
+    <Content Include="lib\insp\css\plugins\slick\fonts\slick.svg" />
+    <Content Include="lib\insp\css\plugins\slick\slick-theme.css" />
+    <Content Include="lib\insp\css\plugins\slick\slick.css" />
+    <Content Include="lib\insp\css\plugins\steps\jquery.steps.css" />
+    <Content Include="lib\insp\css\plugins\summernote\summernote-bs3.css" />
+    <Content Include="lib\insp\css\plugins\summernote\summernote.css" />
+    <Content Include="lib\insp\css\plugins\sweetalert\sweetalert.css" />
+    <Content Include="lib\insp\css\plugins\switchery\switchery.css" />
+    <Content Include="lib\insp\css\plugins\toastr\toastr.min.css" />
+    <Content Include="lib\insp\css\plugins\touchspin\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="lib\insp\css\style.css" />
+    <Content Include="lib\insp\css\sweetalert.css" />
     <Content Include="lib\IsometricGrids\animOnScroll1.js" />
     <Content Include="lib\IsometricGrids\classie.js" />
     <Content Include="lib\IsometricGrids\component.css" />
@@ -240,6 +336,11 @@
     <Content Include="lib\Material\ripples.js" />
     <Content Include="lib\Material\ripples.min.css" />
     <Content Include="lib\Material\ripples.min.js" />
+    <Content Include="lib\metro\jquery.gridster.js" />
+    <Content Include="lib\metro\jquery.gridster.min.css" />
+    <Content Include="lib\metro\sprite.png" />
+    <Content Include="lib\metro\metro.css" />
+    <Content Include="lib\MyAnimation.css" />
     <Content Include="lib\swiper\css\animate.min.css" />
     <Content Include="lib\swiper\css\swiper.min.css" />
     <Content Include="lib\swiper\js\swiper-3.4.1.jquery.min.js" />
@@ -252,8 +353,7 @@
     <Content Include="lib\threeDbg\style.css" />
     <Content Include="lib\vue.js" />
     <Content Include="lib\main.js" />
-    <Content Include="lib\mian.css" />
-    <Content Include="Assets\webuploader\bg.png" />
+    <Content Include="lib\main.css" />
     <Content Include="Content\app.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -314,6 +414,8 @@
     <Content Include="img\PageCloud_logo.svg" />
     <Content Include="img\threeDbg.jpg" />
     <Content Include="img\wireframe.png" />
+    <Content Include="lib\waves\waves.css" />
+    <Content Include="lib\waves\waves.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\app.js" />
@@ -346,6 +448,12 @@
     <Content Include="Areas\Admin\Views\Article\Index.cshtml" />
     <Content Include="lib\Material\material.min.js.map" />
     <Content Include="lib\Material\ripples.min.js.map" />
+    <Content Include="lib\insp\css\plugins\footable\fonts\footable.eot" />
+    <Content Include="lib\insp\css\plugins\footable\fonts\footable.ttf" />
+    <Content Include="lib\insp\css\plugins\footable\fonts\footable.woff" />
+    <Content Include="lib\insp\css\plugins\slick\fonts\slick.eot" />
+    <Content Include="lib\insp\css\plugins\slick\fonts\slick.ttf" />
+    <Content Include="lib\insp\css\plugins\slick\fonts\slick.woff" />
     <None Include="Properties\PublishProfiles\com11.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -382,13 +490,13 @@
     <Content Include="Views\Home\Pic.cshtml" />
     <Content Include="Views\Me\Index.cshtml" />
     <Content Include="Views\Home\Index3.cshtml" />
+    <Content Include="Views\Campaign\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="fonts\sourcesanspro\" />
-    <Folder Include="lib\insp\css\" />
     <Folder Include="lib\insp\email_templates\" />
     <Folder Include="lib\insp\font-awesome\" />
     <Folder Include="lib\insp\fonts\" />
@@ -396,8 +504,7 @@
     <Folder Include="lib\insp\js\" />
     <Folder Include="lib\swiper\img\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Ajax\" />
-    <Folder Include="Views\Base\" />
+    <Folder Include="Views\Blog\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -408,13 +515,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Amayer.Info.CL\Amayer.Info.CL.csproj">
       <Project>{bacd2b75-f28b-44e2-9019-346c0da8f255}</Project>
       <Name>Amayer.Info.CL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

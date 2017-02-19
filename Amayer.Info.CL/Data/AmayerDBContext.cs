@@ -23,7 +23,9 @@ namespace Amayer.Info.CL.Data
         public DbSet<Lable> Lables { get; set; }
         //角色
         //public DbSet<Role> Roles { get; set; }
+        public DbSet<Navigations> Navigations { get; set; }
 
+        public DbSet<BaseType> BaseType { get; set; } 
 
     }
 }

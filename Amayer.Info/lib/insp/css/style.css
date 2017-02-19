@@ -39,8 +39,7 @@ h5 {
   font-weight: 600;
 }
 .nav > li > a {
-  color: #a7b1c2;
-  font-weight: 600;
+  color: #ffffff;
   padding: 14px 20px 14px 25px;
 }
 .nav.navbar-right > li > a {
@@ -51,7 +50,7 @@ h5 {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
-  background-color: #293846;
+  background-color: #2f2f2f;
   color: white;
 }
 .nav .open > a,
@@ -161,14 +160,13 @@ h5 {
 }
 .nav-header {
   padding: 33px 25px;
-  background: url("patterns/header-profile.png") no-repeat;
 }
 .pace-done .nav-header {
   transition: all 0.4s;
 }
 .nav > li.active {
   border-left: 4px solid #19aa8d;
-  background: #293846;
+  background: #2F2F2F;
 }
 .nav.nav-second-level > li.active {
   border: none;
@@ -320,7 +318,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 }
 .navbar-fixed-top,
 .navbar-static-top {
-  background: #f3f3f4;
+  background: #000000;
 }
 .fixed-nav #wrapper {
   margin-top: 0;
@@ -3299,8 +3297,8 @@ body.tour-open .animated {
   border-bottom: 1px solid #e7eaec;
 }
 body {
-  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #2f4050;
+  font-family: "Microsoft YaHei";
+  background-color: #1f1f1f;
   font-size: 13px;
   color: #676a6c;
   overflow-x: hidden;
@@ -3340,13 +3338,14 @@ body.boxed-layout #wrapper {
 }
 a {
   cursor: pointer;
+  color:#868686;
 }
 a:hover,
 a:focus {
   text-decoration: none;
 }
 .border-bottom {
-  border-bottom: 1px solid #e7eaec !important;
+  border-bottom: 1px solid #333333 !important;
 }
 .font-bold {
   font-weight: 600;
@@ -3740,21 +3739,17 @@ code {
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  background-color: #ffffff;
-  border-color: #e7eaec;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 3px 0 0;
+  background-color: #1F1F1F;
   color: inherit;
   margin-bottom: 0;
   padding: 14px 15px 7px;
   min-height: 48px;
 }
 .ibox-content {
-  background-color: #ffffff;
+  background-color: #1F1F1F;
   color: inherit;
   padding: 15px 20px 20px 20px;
-  border-color: #e7eaec;
+  border-color: #333333;
   border-image: none;
   border-style: solid solid none;
   border-width: 1px 0;
@@ -3810,6 +3805,7 @@ table.table-mail tr td {
   padding: 0;
   text-overflow: ellipsis;
   float: left;
+      color: #ffffff;
 }
 .ibox-title .label {
   float: left;
@@ -3841,7 +3837,7 @@ table.table-mail tr td {
 }
 /* BACKGROUNDS */
 .gray-bg {
-  background-color: #f3f3f4;
+  background-color: #171717;
 }
 .white-bg {
   background-color: #ffffff;

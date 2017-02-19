@@ -6,6 +6,9 @@
 .a{
     cursor:pointer;
 }
+.a:hover{
+    text-decoration:none;
+}
 ol, ul {
     list-style: none;
 }
@@ -26,17 +29,23 @@ ol, ul {
       color: #00A686;
 }
 .bgcolor_metro1{
-     background-color: #262626;
+     background-color: #2F2F2F;
 }
 .color_metro1{
-       color: #262626;
+       color: #2F2F2F;
 }
 
 .bgcolor_metro2{
-     background-color: #1A1A1A;
+     background-color: #1F1F1F;
 }
 .color_metro2{
-       color: #1A1A1A;
+       color: #1F1F1F;
+}
+.bgcolor_metro3{
+     background-color: #171717;
+}
+.color_metro3{
+       color: #171717;
 }
 .bgcolor_dark{
      background-color: #000000;
@@ -54,7 +63,7 @@ ol, ul {
     color:#ECECEC;
 }
 .font-secTitle{
-    color:#999999;
+    color:#939393;
 }
 
 
