@@ -10,3 +10,9 @@ E:\Demo\000\root\KuMaDao\test\bin\Debug\test.pdb
 E:\Demo\000\root\KuMaDao\test\obj\Debug\test.csprojResolveAssemblyReference.cache
 E:\Demo\000\root\KuMaDao\test\obj\Debug\test.exe
 E:\Demo\000\root\KuMaDao\test\obj\Debug\test.pdb
+D:\MyCode\KuMaDao\test\bin\Debug\test.exe.config
+D:\MyCode\KuMaDao\test\obj\Debug\test.exe
+D:\MyCode\KuMaDao\test\obj\Debug\test.pdb
+D:\MyCode\KuMaDao\test\bin\Debug\test.exe
+D:\MyCode\KuMaDao\test\bin\Debug\test.pdb
+D:\MyCode\KuMaDao\test\obj\Debug\test.csprojResolveAssemblyReference.cache

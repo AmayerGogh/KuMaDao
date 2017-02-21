@@ -14,44 +14,27 @@ namespace test
         {
             //private static readonly string connstr = ConfigurationManager.ConnectionStrings["connstr"].ConnectionString;
             //Data Source=121.42.151.160;Initial Catalog=HuiPu;Persist Security Info=True;User ID=sa;Password=***********;MultipleActiveResultSets=True;Application Name=EntityFramework
-            string sql = "select id ,Sort from AdminMenus ";
-            StringBuilder sb = new StringBuilder();
-            DataTable table = new DataTable();
-            using (SqlConnection conn = new SqlConnection("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;Persist Security Info=True;user id=bds258291696;password=12345687;MultipleActiveResultSets=True;Application Name=EntityFramework"))
+            List<Person> list = new List<test.Program.Person>();
+            list.Add(new Person() { name = "1", say = "1111" });
+            foreach (var item in list)
             {
-                conn.Open();
-                using (SqlCommand cmd = conn.CreateCommand())
+                if (item.name =="1")
                 {
-
-                    cmd.CommandText = sql;
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-
-                        table.Load(reader);
-                    }
+                    item.say = ":";
                 }
-                for (int i = 0; i < table.Rows.Count; i++)
-                {
-                    string temp = "update AdminMenus set Sort =" + (i + 1) + " where id =" + table.Rows[i]["id"] + ";";
-                    sb.Append(temp);
-                }
-                using (SqlCommand cmd = conn.CreateCommand())
-                {
-                    cmd.CommandText = sb.ToString();
-
-                    int count = cmd.ExecuteNonQuery();
-                    Console.WriteLine(count);
-                }
-
             }
-            Console.WriteLine();
-            Console.WriteLine();
-         
-
-               int id =1;
-            Console.WriteLine(sb.ToString());
-
+            for (int i = 0; i < list.Count(); i++)
+            {
+                Console.WriteLine(list[i].say);
+            }
+            
             Console.ReadKey();
+        }
+
+        public class Person
+        {
+            public string name { get; set; }
+            public string say { get; set; }
         }
     }
 }
