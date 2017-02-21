@@ -105,6 +105,15 @@ $(document).ready(function () {
 
     // Minimalize menu
     $('.navbar-minimalize').click(function () {
+        
+        //if ($(".nav-header").height(50)) {
+        //    alert(true);
+        //    $(".nav-header").css("height", "131px");
+        //} else {
+        //    alert(false);
+        //    $(".nav-header").css("height", "50px");
+        //}
+
         $("body").toggleClass("mini-navbar");
         SmoothlyMenu();
 

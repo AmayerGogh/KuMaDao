@@ -1,7 +1,10 @@
 ﻿
-<nav class="navbar-default navbar-static-side" role="navigation" style="background-color: #1f1f1f;">
+<nav class="navbar-default navbar-static-side" role="navigation" style="background-color: #1f1f1f;    transition: width 0.2s;">
     <div class="sidebar-collapse">
         <ul class="nav metismenu" id="side-menu">
+            <li style="width:50px;" class="navbar-minimalize">
+                <a href="#" style="font-size: 16px;"><i class="fa fa-bars"></i></a>
+            </li>
             <li class="nav-header">
                 <div class="dropdown profile-element">
                     <span>
@@ -21,9 +24,23 @@
                         <li class="divider"></li>
                         <li><a href="login.html">Logout</a></li>
                     </ul>
-                </div>
+                </div>  
                 <div class="logo-element">
-                    IN+
+                    <img class="img-circle" alt="image" src="~/img/logo.png" style="max-width: 35px; margin-left: -18px;margin-top: -70px;" />
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="/admin">
+                        <span class="clear">
+                            <span class="block m-t-xs">
+                                <strong class="font-bold">David Williams</strong>
+                            </span> <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="mailbox.html">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
                 </div>
             </li>
             <li class="active">
