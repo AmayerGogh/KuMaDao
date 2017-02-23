@@ -3508,13 +3508,13 @@ ol.unstyled {
   right: 0;
   z-index: 1000;
   padding: 10px 20px;
-  background: white;
+  background: rgba(0,0,0,0.7);
   border-top: 1px solid #e7eaec;
   margin-left: 220px;
 }
 body.mini-navbar .footer.fixed,
 body.body-small.mini-navbar .footer.fixed {
-  margin: 0 0 0 70px;
+  margin: 0 0 0 50px;
 }
 body.mini-navbar.canvas-menu .footer.fixed,
 body.canvas-menu .footer.fixed {

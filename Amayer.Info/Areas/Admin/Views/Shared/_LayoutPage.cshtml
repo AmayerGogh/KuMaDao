@@ -23,11 +23,10 @@
     <link href="/lib/insp/css/animate.css" rel="stylesheet">
     <link href="/lib/insp/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="~/Assets/css/amayer_AndroidClick.css" type="text/css" />
-    @RenderSection("head", required: false)
-    
+    @RenderSection("head", required: false)    
 </head>
 
-<body>
+<body class="pace-done fixed-sidebar">
     <div id="wrapper">
         @Html.Partial("_Navigation")  @*//把数据传过去*@
         <div id="page-wrapper" class="gray-bg dashbard-1">
@@ -164,12 +163,12 @@
           
             </div>*@
             @RenderBody()
-            <div class="footer">
+            <div class="footer fixed">
                 <div class="pull-right">
                     10GB of <strong>250GB</strong> Free.
                 </div>
                 <div>
-                    <strong>Copyright</strong> Example Company © 2014-2015
+                    <strong>Copyright</strong> 欢迎你
                 </div>
             </div>
         </div>
