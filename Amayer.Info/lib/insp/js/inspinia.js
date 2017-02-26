@@ -116,6 +116,10 @@ $(document).ready(function () {
 
         $("body").toggleClass("mini-navbar");
         SmoothlyMenu();
+        ////×èÖ¹Ã°ÅÝÊÂ¼þ
+        //$(".navbar-minimalize").mousedown(function (event) {
+        //    event.stopPropagation();
+        //});
 
     });
 
@@ -201,6 +205,21 @@ $(window).bind("resize", function () {
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Local Storage functions
 // Set proper body class and plugins based on user configuration
 $(document).ready(function () {
@@ -247,7 +266,24 @@ $(document).ready(function () {
         if (fixedfooter == 'on') {
             $(".footer").addClass('fixed');
         }
+
+
+
+
+
     }
+    $("#sss").on("click", function () {
+        if ($(".footer").hasClass('footer_hidden')) {
+            $(".footer").removeClass('footer_hidden');
+        } else {
+            $(".footer").addClass('footer_hidden');
+        }
+     
+    })
+
+
+
+
 });
 
 // check if browser support HTML5 local storage
@@ -284,7 +320,7 @@ function SmoothlyMenu() {
         setTimeout(
             function () {
                 $('#side-menu').fadeIn(400);
-            }, 100);
+            }, 200);
     } else {
         // Remove all inline style from jquery fadeIn function to reset menu state
         $('#side-menu').removeAttr('style');

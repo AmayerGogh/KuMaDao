@@ -163,12 +163,34 @@
           
             </div>*@
             @RenderBody()
-            <div class="footer fixed">
-                <div class="pull-right">
-                    10GB of <strong>250GB</strong> Free.
+            <div class="footer fixed footer_hidden frosted-glass">
+                <div class="" style="width: 250px;margin: 0 auto;">
+                    <ul class="" style="">
+                        <li>
+                            <div><a href="#"><i class="fa fa-bus"></i></a></div>
+                            <div class="foot_icon_descript">汽车</div>
+                        </li>
+                        <li>
+                            <div><a href="#"><i class="fa fa-code-fork"></i></a></div>
+                            <div class="foot_icon_descript">分享</div>
+                        </li>
+                        <li>
+                            <div><a href="#"><i class="fa fa-check"></i></a></div>
+                            <div class="foot_icon_descript">选择</div>
+                        </li>
+                        <li>
+                            <div><a href="#"><i class="fa fa-coffee"></i></a></div>
+                            <div class="foot_icon_descript">咖啡</div>
+                        </li>
+                        <li>
+                            <div><a href="#"><i class="fa fa-eye"></i></a></div>
+                            <div class="foot_icon_descript">眼睛</div>
+                        </li>
+                    </ul>        
                 </div>
-                <div>
-                    <strong>Copyright</strong> 欢迎你
+                <div class="inline-block" id="sss">
+                           <i class="fa fa fa-angle-double-right"></i>
+
                 </div>
             </div>
         </div>
@@ -843,10 +865,7 @@
 
                     ink.css({ top: y + 'px', left: x + 'px' }).addClass("animate");
                 });
-                //阻止冒泡事件
-                $(".ripplelink").mousedown(function (event) {
-                    event.stopPropagation();
-                });
+               
             });
     </script>
     @RenderSection("scripts", required: false)
