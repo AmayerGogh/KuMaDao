@@ -25,7 +25,7 @@ namespace Amayer.Info.Controllers
 
             // errors
             if (filterContext.Exception != null)
-            {
+            {  
                 //var error = new ErrorRecord();
                // error.Message = filterContext.Exception.Message;
                // error.Controller = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName;
