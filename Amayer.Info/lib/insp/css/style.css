@@ -3227,7 +3227,7 @@ body.tour-open .animated {
   margin: 0;
   border-radius: 0;
   background: #2f4050;
-  color: #fff;
+  color: rebeccapurple;
   text-align: center;
   border-right: 1px solid #334556;
 }
@@ -8241,6 +8241,7 @@ text-align:center;
 .foot_icon_descript {
   font-size: 15px;
     margin-top: 12px;
+    color:white;
 }
 
 .inline-block{

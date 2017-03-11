@@ -213,13 +213,6 @@ $(window).bind("resize", function () {
 
 
 
-
-
-
-
-
-
-
 // Local Storage functions
 // Set proper body class and plugins based on user configuration
 $(document).ready(function () {
