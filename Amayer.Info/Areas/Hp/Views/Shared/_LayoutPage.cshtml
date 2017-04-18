@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="~/libs/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/libs/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/libs/css/animate.css" rel="stylesheet" />
+    <link href="~/libs/css/style.css" rel="stylesheet" />
+    <link href="~/libs/css/inner.css" rel="stylesheet" />
+    @RenderSection("head", required: false)
+    
+</head>
+
+<body>
+    @RenderBody()
+    <div class="footer fixed frosted-glass">
+       
+        <ul class="nav navbar-nav navbar-right">
+            <li id="btn_buttomNavBar"><a href="#">b</a></li>
+
+        </ul>
+       
+        <ul class="nav navbar-nav  navbar-right">
+        
+            <li><a href="#">Link</a></li>
+            <li><a href="#"><i class="fa fa-bus"></i></a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+ 
+            
+    
+        
+        @*<div class="" style="width: 250px;margin: 0 auto;">
+            <ul class="" style="">
+                <li>
+                    <div><a href="#"><i class="fa fa-bus"></i></a></div>
+                    <div class="foot_icon_descript">汽车</div>
+                </li>
+                <li>
+                    <div><a href="#"><i class="fa fa-code-fork"></i></a></div>
+                    <div class="foot_icon_descript">分享</div>
+                </li>
+                <li>
+                    <div><a href="#"><i class="fa fa-check"></i></a></div>
+                    <div class="foot_icon_descript">选择</div>
+                </li>
+                <li>
+                    <div><a href="#"><i class="fa fa-coffee"></i></a></div>
+                    <div class="foot_icon_descript">咖啡</div>
+                </li>
+                <li>
+                    <div><a href="#"><i class="fa fa-eye"></i></a></div>
+                    <div class="foot_icon_descript">眼睛</div>
+                </li>
+            </ul>
+        </div>
+        <div class="inline-block" id="buttomNavigationBar_More">
+            <i class="glyphicon glyphicon-option-horizontal"></i>
+        </div>*@
+    </div>
+    <!-- 全局js -->
+    <script src="~/libs/js/jquery.min.js"></script>
+    <script src="~/libs/js/bootstrap.min.js"></script>
+    <script src="~/libs/js/content.js"></script>
+    <script>
+        $(function () {
+            $("#btn_buttomNavBar").on("click", function () {
+                var footer = $(".footer ul li");
+                if (footer.hasClass('buttomNavBar_show')) {
+                    footer.removeClass('buttomNavBar_show');
+                } else {
+                    footer.addClass('buttomNavBar_show');
+                }
+            })
+        })
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

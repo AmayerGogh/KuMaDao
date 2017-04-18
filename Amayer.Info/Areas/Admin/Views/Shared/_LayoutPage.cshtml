@@ -23,17 +23,18 @@
     <link href="/lib/insp/css/animate.css" rel="stylesheet">
     <link href="/lib/insp/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="~/Assets/css/amayer_AndroidClick.css" type="text/css" />
-    @RenderSection("head", required: false)    
+    @RenderSection("head", required: false)
+    
 </head>
 
-<body class="pace-done fixed-sidebar">
+<body>
     <div id="wrapper">
         @Html.Partial("_Navigation")  @*//把数据传过去*@
         <div id="page-wrapper" class="gray-bg dashbard-1">
             <div class="row border-bottom">
-                <nav class="navbar navbar-static-top width_1" role="navigation" style="margin-bottom: 0">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header">
-                        @*<a class="navbar-minimalize minimalize-styl-2" href="#"><i class="fa fa-bars"></i> </a>*@
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="/admin"><i class="fa fa-bars"></i> </a>
                         <form role="search" class="navbar-form-custom" action="search_results.html">
                             <div class="form-group">
                                 <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
@@ -163,34 +164,12 @@
           
             </div>*@
             @RenderBody()
-            <div class="footer fixed footer_hidden frosted-glass">
-                <div class="" style="width: 250px;margin: 0 auto;">
-                    <ul class="" style="">
-                        <li>
-                            <div><a href="#"><i class="fa fa-bus"></i></a></div>
-                            <div class="foot_icon_descript">汽车</div>
-                        </li>
-                        <li>
-                            <div><a href="#"><i class="fa fa-code-fork"></i></a></div>
-                            <div class="foot_icon_descript">分享</div>
-                        </li>
-                        <li>
-                            <div><a href="#"><i class="fa fa-check"></i></a></div>
-                            <div class="foot_icon_descript">选择</div>
-                        </li>
-                        <li>
-                            <div><a href="#"><i class="fa fa-coffee"></i></a></div>
-                            <div class="foot_icon_descript">咖啡</div>
-                        </li>
-                        <li>
-                            <div><a href="#"><i class="fa fa-eye"></i></a></div>
-                            <div class="foot_icon_descript">眼睛</div>
-                        </li>
-                    </ul>        
+            <div class="footer">
+                <div class="pull-right">
+                    10GB of <strong>250GB</strong> Free.
                 </div>
-                <div class="inline-block" id="sss">
-                           <i class="fa fa fa-angle-double-right"></i>
-
+                <div>
+                    <strong>Copyright</strong> Example Company © 2014-2015
                 </div>
             </div>
         </div>
@@ -440,7 +419,7 @@
                     <div id="tab-2" class="tab-pane">
 
                         <div class="sidebar-title">
-                            <h3> <i class="fa fa-cube"></i>最近1</h3>
+                            <h3> <i class="fa fa-cube"></i> Latest projects</h3>
                             <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
                         </div>
 
@@ -865,7 +844,10 @@
 
                     ink.css({ top: y + 'px', left: x + 'px' }).addClass("animate");
                 });
-               
+                //阻止冒泡事件
+                $(".ripplelink").mousedown(function (event) {
+                    event.stopPropagation();
+                });
             });
     </script>
     @RenderSection("scripts", required: false)

@@ -16,12 +16,11 @@ namespace Amayer.Info.CL.Data
     {
         public static IDbConnection QueryDB()
         {
-             //return new DbContext().ConnectionStringName("conn",);
-             return new SqlConnection("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
+            //return new DbContext().ConnectionStringName("conn",);
+            return new SqlConnection("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
         }
-        //IDbConnection conn = new SqlConnection("data source=.;initial catalog=AmayerOA;user id=sa;password=12345687");
+       
 
 
-      
-    }
+    } 
 }

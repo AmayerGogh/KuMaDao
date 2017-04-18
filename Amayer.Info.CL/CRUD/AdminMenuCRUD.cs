@@ -1,4 +1,6 @@
 ﻿using Amayer.Info.CL.Models;
+using Chloe;
+using Chloe.SqlServer;
 using Dapper;
 using System;
 using System.Collections.Generic;
@@ -13,21 +15,31 @@ namespace Amayer.Info.CL.CRUD
     public class AdminMenuCRUD:Base<AdminMenu>
     {
 
-        private IDbConnection db;//= Amayer.Info.CL.Data.DapperData.QueryDB();
-        public AdminMenuCRUD(IDbConnection db) :base(db)
+        //private IDbConnection db;
+        //public AdminMenuCRUD(IDbConnection db) :base(db)
+        //{
+
+        //    this.db = db;
+        //}
+        private MsSqlContext db;
+        public AdminMenuCRUD(MsSqlContext db) : base(db)
         {
-           // db =  Amayer.Info.CL.Data.DapperData.QueryDB();
             this.db = db;
         }
 
-       
+
+        public IQuery<AdminMenu> GetListWhere()
+        {
+            IQuery<AdminMenu> q = db.Query<AdminMenu>().Where(a=>a.Id>1);
+            return q;
+        }
 
         //public IEnumerable<AdminMenu> GetListWhere()
         //{
         //    return db.Query<AdminMenu>("select * from AdminMenus");
         //}
 
-       
+
     }
 
    

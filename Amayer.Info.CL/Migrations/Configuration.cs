@@ -27,5 +27,7 @@ namespace Amayer.Info.CL.Migrations
             //    );
             //
         }
-    }
+
+
+}
 }

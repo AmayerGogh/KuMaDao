@@ -1,0 +1,22 @@
+﻿/*html, body, iframe {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+}*/
+body {
+    background: url('http://cn.bing.com/az/hprichbg/rb/MVAU_ZH-CN9430011383_1920x1080.jpg');
+}
+
+.navbar-static-side {
+   background: rgba(31, 31, 31, 0.51);
+}
+.nav > li.active {
+    background: rgba(255, 255, 255, 0.21);
+    color: white;
+}
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}

@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Chloe">
+      <HintPath>..\dll\Chloe.dll</HintPath>
+    </Reference>
+    <Reference Include="Chloe.SqlServer">
+      <HintPath>..\dll\Chloe.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Dapper, Version=1.50.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
       <Private>True</Private>
@@ -58,19 +64,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ComMsg\Result.cs" />
     <Compile Include="Com\WebHelper.cs" />
     <Compile Include="CRUD\AdminMenuCRUD.cs" />
     <Compile Include="CRUD\Base.cs" />
     <Compile Include="Data\AmayerDBContext.cs" />
+    <Compile Include="Data\ChloeData.cs" />
     <Compile Include="Data\DapperData.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdminMenu.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Lable.cs" />
     <Compile Include="Models\Log.cs" />
-    <Compile Include="Models\Navigations.cs" />
-    <Compile Include="Models\Type.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\WebInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

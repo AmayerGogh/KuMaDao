@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Chloe.SqlServer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,39 +9,19 @@ namespace Amayer.Info.Controllers
 {
     public class BaseController : Controller
     {
-       
+        //public MsSqlContext Msc;
+        
+      
+
 
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            base.OnActionExecuting(filterContext);  
+           // Msc = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
+            base.OnActionExecuting(filterContext);
         }
-
         protected override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-
-            if (filterContext.HttpContext.Items.Contains("Menus"))
-            {
-                ViewData.Add("Menus", filterContext.HttpContext.Items["Menus"]);
-            }
-
-            // errors
-            if (filterContext.Exception != null)
-            {  
-                //var error = new ErrorRecord();
-               // error.Message = filterContext.Exception.Message;
-               // error.Controller = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName;
-               // error.Action = filterContext.ActionDescriptor.ActionName;
-               // error.Source = filterContext.Exception.Source;
-               // error.StackTrace = filterContext.Exception.StackTrace;
-               //// error.Status = (int)Enums.Status.正常;
-               // error.Member = User == null ? "未知用户" : User.RealName;
-               // error.CreateTime = DateTime.Now;
-               // db.ErrorRecord.Add(error);
-               // db.SaveChanges();
-            }
-
-            if (User != null)
-               // ViewBag.Messages = MessageBLL.GetExtList(User.Id, false);
+           // Msc.Dispose();
             base.OnActionExecuted(filterContext);
         }
     }

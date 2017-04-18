@@ -9,66 +9,165 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
- 
-    <link href="~/lib/waves/waves.css" rel="stylesheet" />
-    <style>
-        #colored-button .btn {
-            color: #fff;
-        }
-
-        #colored-button a,
-        #colored-button a:hover {
-            background: #01BCFF;
-        }
-
-        #colored-button button,
-        #colored-button button:hover {
-            background: #1bb556;
-        }
-
-        #colored-button input,
-        #colored-button input:hover {
-            background: #ff4f0f;
-        }
-    </style>
-
     <script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="~/lib/waves/waves.js"></script>
-   
+    @*<script src="http://cdn.jsdelivr.net/vue/1.0.7/vue.min.js"></script>*@
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>  
     <script type="text/javascript">
-        $(function () {
-            Waves.init();
-            Waves.attach('.flat-buttons', ['waves-button']);
-            Waves.attach('.float-buttons', ['waves-button', 'waves-float']);
-            Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
-            Waves.attach('.adiv', ['waves-button', 'waves-float', 'waves-light']);
-            Waves.attach('.adivinner', ['waves-button', 'waves-float']);
-            Waves.attach('.flat-box', ['waves-block']);
-            Waves.attach('.float-box', ['waves-block', 'waves-float']);
-        })
-    
+ 		$(function(){
+ 			//先实例化一个vue对象
+ 			new Vue({
+    			el:'#app',
+   				data: {
+        		message:'hello world'
+   				}
+			});
+ 			new Vue({
+ 			 	el:'#app2',
+ 			 	ready:function(){
+ 			 		this.$http.get("book.json",function(data){
+ 			 			this.$get('books',data);
+ 			 		}).error(function(data,status,request){
+ 			 			console.log("fail"+status+","+request);
+ 			 		})
+
+ 			 	},
+ 			 	data:{
+ 			 		sortparam: '', //用来排序的
+					book: {
+					id: 0,
+					author: '',
+					name: '',
+					price: ''
+				},
+					books:
+					[
+					    {
+							"id": 1,
+							"author": '曹雪芹',
+							"name": '红楼梦',
+							"price": 32.0
+						},
+						 {
+							"id": 2,
+							"author": '施耐庵',
+							"name": '水浒传',
+							price: 30.0
+						},
+						{
+							"id": '3',
+							"author": '罗贯中',
+							"name": '三国演义',
+							"price": 24.0
+						},
+						{
+							"id": 4,
+							"author": '吴承恩',
+							"name": '西游记',
+							"price": 20.0
+						}
+					]
+ 			 	} ,             //enddata
+ 			 	methods:{
+ 			 		doSomething:function(){
+						alert("被点击");
+ 			 		},
+ 			 		addBook:function(){
+ 						alert("添加书");
+ 						//计算书的id
+					this.book.id = this.books.length + 1;
+					this.books.push(this.book);
+						//将input中的数据重置
+						this.book = '';
+			 			 		}, //endaddBook
+			 		delBook:function(book){
+			 		 	this.books.$remove(book);
+			 		            } ,	//enddel
+			 		editBook:function(book){
+			 			this.book =book;
+			 		},
+			 		sortBy: function(sortparam) {
+			        	this.sortparam = sortparam;
+			     	}
+ 			 	}
+ 			});
+ 			//定义过滤器
+ 			Vue.filter('reverse', function (value) {
+  			  return value.split('').reverse().join('')
+			})
+ 		})
     </script>
 </head>
 <body>
- 
-    <div>
-        <p class="text-center">
-            <a class="flat-buttons">Button A</a>
-            <button class="flat-buttons">Button B</button>
-            <input class="flat-buttons" type="submit" value="Button C">
-        </p>
+    <div class="container">
+        <div class="col-md-6 col-md-offset-3">
+            <h1>Vue demo</h1>
+            <div id="app">
+                <div>{{message}}</div>
+                <input type="text" v-model="message">
+                <div>{{message+'123123'}}</div>
 
-        <p id="colored-button" class="text-center">
-            <a class="btn float-buttons">Button A</a>
-            <button class="btn float-button-light">Button B</button>
-            <input class="btn float-buttons" type="submit" value="Button C">
-        </p>
-    </div>
 
-    <div class="flat-buttons" style="height:300px;width:500px;background-color:gray;">
-        <div  class="float-box" style="height:150px;width:80%;background-color:#f00;">
+
+                <select v-model="selected" multiple>
+                    <option selected>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                </select>
+                <br>
+                <span>Selected: {{ selected | json }}</span>
+            </div>
+
+            <h1>绑定表格</h1>
+            <div id="app2">
+                <table class="table table-hover">
+                    <th class="text-right" v-on:click="sortBy('id')">序号</th>
+                    <th class="text-right" v-on:click="sortBy('name')">书名</th>
+                    <th class="text-right" v-on:click="sortBy('author')">作者</th>
+                    <th class="text-right" v-on:click="sortBy('price')">价格</th>
+                    <th></th>
+                    <th></th>
+                    <tr v-for="item in books | orderBy sortparam" v-on:click="editBook(item)">
+                        <td>{{item.id}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.author}}</td>
+                        <td>{{item.price}}</td>
+                        <td><button type="button" class="btn btn-primary" v-on:click="editBook(item)">编辑</button></td>
+                        <!-- v-if用于条件判断，和v-else是一对 用于包含多个元素，当元素只有一个时，直接在元素上用v-if即可-->
+                        <template v-if="item.id%2==0">
+                            <td><button type="button" class="btn btn-success" v-on:click="delBook(item)">删除</button></td>
+                        </template>
+                        <template v-else>
+                            <td><button type="button" class="btn btn-danger" v-on:click="delBook(item)">删除</button></td>
+                        </template>
+
+                    </tr>
+                </table>
+                <button v-on:click="doSomething">绑定事件（添加书籍）</button>
+                <div id="add-book">
+                    <legend>添加书籍</legend>
+                    <div class="form-group">
+                        <label for="">书名</label>
+                        <input type="text" class="form-control" v-model="book.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">作者</label>
+                        <input type="text" class="form-control" v-model="book.author">
+                    </div>
+                    <div class="form-group">
+                        <label for="">价格</label>
+                        <input type="text" class="form-control" v-model="book.price">
+                    </div>
+                    <!--事件可以不加（）-->
+                    <button class="btn btn-primary btn-block" v-on:click="addBook()">添加</button>
+                </div>
+            </div>
+
+
 
         </div>
+
+
+    </div>
     </div>
 </body>
 </html>
