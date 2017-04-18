@@ -44,7 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Chloe, Version=2.6.0.0, Culture=neutral, PublicKeyToken=null" />
+    <Reference Include="Chloe, Version=2.6.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\root\dll\Chloe.dll</HintPath>
+    </Reference>
     <Reference Include="Chloe.SqlServer, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dll\Chloe.SqlServer.dll</HintPath>
