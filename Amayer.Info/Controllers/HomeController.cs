@@ -53,7 +53,7 @@ namespace Amayer.Info.Controllers
 
         public ActionResult SQL()
         {
-            string sql = "select id from 表 where orderby * * *";
+           // string sql = "select id from 表 where orderby * * *";
             StringBuilder sb = new StringBuilder();
             sb.Append("update CourseWare  set ");
             DataTable table = new DataTable();
