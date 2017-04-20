@@ -3737,7 +3737,7 @@ nav.page-tabs {
     vertical-align: bottom;
 }
 
-.table > thead > tr > th,
+/*.table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
 .table > thead > tr > td,
@@ -3747,7 +3747,7 @@ nav.page-tabs {
     line-height: 1.42857;
     padding: 8px;
     vertical-align: middle;
-}
+}*/
 
 
 /* PANELS */

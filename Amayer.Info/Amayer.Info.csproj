@@ -169,6 +169,8 @@
     <Compile Include="Areas\Hp\Controllers\ArticleController.cs" />
     <Compile Include="Areas\Hp\Controllers\HomeController.cs" />
     <Compile Include="Areas\Hp\HpAreaRegistration.cs" />
+    <Compile Include="Com\Enums.cs" />
+    <Compile Include="Com\WebHelper.cs" />
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -922,6 +924,7 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Hp\Models\" />
+    <Folder Include="bin\" />
     <Folder Include="fonts\sourcesanspro\" />
     <Folder Include="lib\insp\css\" />
     <Folder Include="lib\insp\email_templates\" />
