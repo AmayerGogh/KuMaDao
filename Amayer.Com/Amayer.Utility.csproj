@@ -68,7 +68,6 @@
     <Compile Include="Entity\Result.cs" />
     <Compile Include="Entity\SelectItem.cs" />
     <Compile Include="Entity\UrlParameter.cs" />
-    <Compile Include="Mapper\Mapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
