@@ -9,11 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amayer.Info.CL", "Amayer.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{36DC46F0-3DA0-4DAA-A543-8BC4B33C874E}"
 EndProject
-<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amayer.Utility", "Amayer.Com\Amayer.Utility.csproj", "{E636EEED-1E79-4968-8CCE-1B4451F0E197}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amayer.Utility", "Amayer.Com\Amayer.Utility.csproj", "{2983A775-DED3-48DA-A833-1B697ADD41B7}"
->>>>>>> 4ce98cf7bd348c404781c5453ee361c8c8f9290a
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +29,10 @@ Global
 		{36DC46F0-3DA0-4DAA-A543-8BC4B33C874E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36DC46F0-3DA0-4DAA-A543-8BC4B33C874E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36DC46F0-3DA0-4DAA-A543-8BC4B33C874E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2983A775-DED3-48DA-A833-1B697ADD41B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2983A775-DED3-48DA-A833-1B697ADD41B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2983A775-DED3-48DA-A833-1B697ADD41B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2983A775-DED3-48DA-A833-1B697ADD41B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E636EEED-1E79-4968-8CCE-1B4451F0E197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E636EEED-1E79-4968-8CCE-1B4451F0E197}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E636EEED-1E79-4968-8CCE-1B4451F0E197}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E636EEED-1E79-4968-8CCE-1B4451F0E197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

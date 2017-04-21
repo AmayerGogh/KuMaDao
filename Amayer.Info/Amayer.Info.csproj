@@ -746,10 +746,7 @@
     <Content Include="lib\metro\jquery.gridster.min.css" />
     <Content Include="lib\metro\metro.css" />
     <Content Include="lib\metro\sprite.png" />
-<<<<<<< HEAD
-=======
-    <Content Include="lib\myAnimation.css" />
->>>>>>> 4ce98cf7bd348c404781c5453ee361c8c8f9290a
+
     <Content Include="lib\swiper\css\animate.min.css" />
     <Content Include="lib\swiper\css\swiper.min.css" />
     <Content Include="lib\swiper\js\swiper-3.4.1.jquery.min.js" />
