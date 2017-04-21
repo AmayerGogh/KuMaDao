@@ -1,16 +1,22 @@
 ﻿
 /* FOOTER */
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    overflow: hidden;
-   
-    background: rgba(0,0,0,0.7);
+body {
+    background-color: #000;
+}
+table {
+    background-color: #1f1f1f;
+}
+.table > tbody > tr > td, .table > tbody > tr > th {
+    border-top: 2px solid rgba(0, 0, 0, 0.93);
+}
+.table > thead > tr > th {
+    border: 2px solid #000000;
+} 
+.table-hover > tbody > tr:hover {
+   background-color: #2f2f2f;
     
+    z-index: 3;
 }
 
 .footer ul li{
@@ -46,16 +52,20 @@
     text-align: center;
     margin: 0 8px;
 }*/
-
+.footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
 .footer .fa {
     font-size: 25px;
 }
 
-.foot_icon_descript {
-    /*font-size: 12px;
+/*.foot_icon_descript {
+    font-size: 12px;
     margin-top: 12px;
-    color: white;*/
-}
+    color: white;
+}*/
 
 .inline-block {
     display: inline-block;
