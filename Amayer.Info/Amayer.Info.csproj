@@ -45,7 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Chloe, Version=2.6.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\root\dll\Chloe.dll</HintPath>
+      <HintPath>..\dll\Chloe.dll</HintPath>
     </Reference>
     <Reference Include="Chloe.SqlServer, Version=2.6.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -169,8 +169,12 @@
     <Compile Include="Areas\Hp\Controllers\ArticleController.cs" />
     <Compile Include="Areas\Hp\Controllers\HomeController.cs" />
     <Compile Include="Areas\Hp\HpAreaRegistration.cs" />
+    <Compile Include="Com\Enums.cs" />
+    <Compile Include="Com\WebHelper.cs" />
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\CampaignController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MeController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
@@ -704,6 +708,7 @@
     <Content Include="lib\AppLikeOnePage\jq22-demo.css" />
     <Content Include="lib\AppLikeOnePage\normalize.css" />
     <Content Include="lib\AppLikeOnePage\onepage.js" />
+    <Content Include="lib\front_main.css" />
     <Content Include="lib\insp\Angular\css\animate.css" />
     <Content Include="lib\insp\Angular\css\bootstrap.min.css" />
     <Content Include="lib\insp\Angular\css\patterns\3.png" />
@@ -724,6 +729,7 @@
     <Content Include="lib\IsometricGrids\masonry.pkgd.min.js" />
     <Content Include="lib\IsometricGrids\modernizr.custom.js" />
     <Content Include="lib\IsometricGrids\normalize.css" />
+    <Content Include="lib\main.css" />
     <Content Include="lib\Material\bootstrap-material-design.css" />
     <Content Include="lib\Material\bootstrap-material-design.min.css" />
     <Content Include="lib\Material\fonts.googleapis.com.css" />
@@ -736,6 +742,10 @@
     <Content Include="lib\Material\ripples.js" />
     <Content Include="lib\Material\ripples.min.css" />
     <Content Include="lib\Material\ripples.min.js" />
+    <Content Include="lib\metro\jquery.gridster.js" />
+    <Content Include="lib\metro\jquery.gridster.min.css" />
+    <Content Include="lib\metro\metro.css" />
+    <Content Include="lib\metro\sprite.png" />
     <Content Include="lib\swiper\css\animate.min.css" />
     <Content Include="lib\swiper\css\swiper.min.css" />
     <Content Include="lib\swiper\js\swiper-3.4.1.jquery.min.js" />
@@ -810,6 +820,8 @@
     <Content Include="img\PageCloud_logo.svg" />
     <Content Include="img\threeDbg.jpg" />
     <Content Include="img\wireframe.png" />
+    <Content Include="lib\waves\waves.css" />
+    <Content Include="lib\waves\waves.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\app.js" />

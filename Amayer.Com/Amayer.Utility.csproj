@@ -60,15 +60,17 @@
     <Compile Include="Com\Attachment.cs" />
     <Compile Include="Com\Configs.cs" />
     <Compile Include="Com\Enums.cs" />
+    <Compile Include="Com\EventH.cs" />
     <Compile Include="Com\FileHelper.cs" />
     <Compile Include="Com\HtmlAnalysis.cs" />
     <Compile Include="Com\JsonHelper.cs" />
+    <Compile Include="Com\SecurityProvider.cs" />
     <Compile Include="Com\XMLHelper.cs" />
     <Compile Include="Entity\Api.cs" />
     <Compile Include="Entity\Result.cs" />
     <Compile Include="Entity\SelectItem.cs" />
     <Compile Include="Entity\UrlParameter.cs" />
-    <Compile Include="Mapper\Mapper.cs" />
+    <Compile Include="Com\Mapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

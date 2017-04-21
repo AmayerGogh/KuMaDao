@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26228.4
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amayer.Info", "Amayer.Info\Amayer.Info.csproj", "{6EC3A545-D26F-458C-B5D3-8456C397D91E}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amayer.Info.CL", "Amayer.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{36DC46F0-3DA0-4DAA-A543-8BC4B33C874E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amayer.Com", "Amayer.Com\Amayer.Com.csproj", "{E636EEED-1E79-4968-8CCE-1B4451F0E197}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amayer.Utility", "Amayer.Com\Amayer.Utility.csproj", "{E636EEED-1E79-4968-8CCE-1B4451F0E197}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
