@@ -680,9 +680,6 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     }
 }
 
-.btn {
-    border-radius: 3px;
-}
 
 .float-e-margins .btn {
     margin-bottom: 5px;
@@ -3950,7 +3947,7 @@ img.circle-border {
 }
 
 .breadcrumb {
-    background-color: #ffffff;
+  
     padding: 0;
     margin-bottom: 0;
 }

@@ -219,11 +219,10 @@
     <Content Include="img\wap-home-prelaunch-banner_09484932a1.png" />
     <Content Include="img\word-left.png" />
     <Content Include="libs\css\animate.css" />
-    <Content Include="libs\css\bootstrap-rtl.css" />
-    <Content Include="libs\css\bootstrap.min.css" />
+    <Content Include="libs\css\bootstrap-outer.css" />
+    <Content Include="libs\css\bootstrap-inner.css" />
     <Content Include="libs\css\demo\webuploader-demo.css" />
     <Content Include="libs\css\font-awesome.css" />
-    <Content Include="libs\css\font-awesome.min.css" />
     <Content Include="libs\css\inner.css" />
     <Content Include="libs\css\login.css" />
     <Content Include="libs\css\outer.css" />
@@ -746,7 +745,6 @@
     <Content Include="lib\metro\jquery.gridster.min.css" />
     <Content Include="lib\metro\metro.css" />
     <Content Include="lib\metro\sprite.png" />
-
     <Content Include="lib\swiper\css\animate.min.css" />
     <Content Include="lib\swiper\css\swiper.min.css" />
     <Content Include="lib\swiper\js\swiper-3.4.1.jquery.min.js" />
@@ -929,6 +927,7 @@
     <Content Include="Views\Home\Pic.cshtml" />
     <Content Include="Views\Me\Index.cshtml" />
     <Content Include="Views\Home\Index3.cshtml" />
+    <Content Include="Views\Campaign\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -983,7 +982,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>4772</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:7231/</IISUrl>
+          <IISUrl>http://localhost:7200/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
