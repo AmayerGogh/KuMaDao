@@ -22,19 +22,9 @@ namespace Amayer.Info.Controllers
             //dapper的用法
             //var entity = new AdminMenuCRUD(DapperMsg.DbContext);
          
-            var en =  new AdminMenuCRUD(CholeMsg.DbContext);
+            var en =  new ArticleCRUD(CholeMsg.DbContext);
             var re = en.GetList<AdminMenu>().ToList();
-            //CholeMsg.DbContext.Query<>
-            var e = en.GetListWhere();
-             
-
-           // model.AdminMenus = entity.GetList("AdminMenus");                   
-
-            //   var result =  connection.Execute("insert into student values (@Name,@Gender)", new Student { Name = "234", Gender = true });
-
-            //var result= conn.Execute("update student set name =@Name where id=@id ", new { Name = "dapper更改的", id = 4 });
-            //var s  = entity.GetStu();
-
+          
             return View(model);
         }
 

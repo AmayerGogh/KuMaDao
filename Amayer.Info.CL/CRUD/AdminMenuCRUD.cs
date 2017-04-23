@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Amayer.Info.CL.CRUD
 {
-    public class AdminMenuCRUD:Base<AdminMenu>
+    public class AdminMenuCRUD : Base<AdminMenu>
     {
 
         //private IDbConnection db;

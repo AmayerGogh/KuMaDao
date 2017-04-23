@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Com\WebHelper.cs" />
     <Compile Include="CRUD\AdminMenuCRUD.cs" />
+    <Compile Include="CRUD\ArticleCRUD.cs" />
     <Compile Include="CRUD\Base.cs" />
     <Compile Include="Data\AmayerDBContext.cs" />
     <Compile Include="Data\ChloeData.cs" />

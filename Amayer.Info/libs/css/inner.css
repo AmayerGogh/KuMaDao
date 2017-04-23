@@ -12,12 +12,12 @@ table {
 }
 .table > thead > tr > th {
     border: 2px solid #000000;
-} 
-.table-hover > tbody > tr:hover {
-   background-color: #2f2f2f;
-    
+}
+.table-hover > tbody > tr:hover, .table-hover > thead > tr > th:hover {
+    background-color: #2f2f2f;
     z-index: 3;
 }
+
 
 .footer ul li{
     width:75px;
