@@ -62,6 +62,7 @@
     <Compile Include="Com\FileHelper.cs" />
     <Compile Include="Com\HtmlAnalysis.cs" />
     <Compile Include="Com\JsonHelper.cs" />
+    <Compile Include="Com\Mapper.cs" />
     <Compile Include="Com\SecurityProvider.cs" />
     <Compile Include="Com\XMLHelper.cs" />
     <Compile Include="Entity\Api.cs" />

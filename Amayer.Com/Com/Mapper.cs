@@ -5,13 +5,12 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amayer.Com
+namespace Amayer.Com.Com
 {
     //调用
-    //调用：StudentSecond ss= TransExpV2<Student, StudentSecond>.Trans(s);
+    //调用： StudentSecond ss =TransExpV2<Student,StudentSecond>.Trans(s)；
     public static class Mapper<TIn, TOut>
     {
-
         private static readonly Func<TIn, TOut> cache = GetFunc();
         private static Func<TIn, TOut> GetFunc()
         {
