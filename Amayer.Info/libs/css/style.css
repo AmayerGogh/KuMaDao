@@ -3604,10 +3604,12 @@ body.body-small .footer.fixed {
 
 .content-tabs {
     position: relative;
-    height: 42px;
-    background: #1f1f1f;
+    /* height: 42px; */
+    background: #040404;
     line-height: 40px;
 }
+
+
 
     .content-tabs .roll-nav,
     .page-tabs-list {
@@ -7138,7 +7140,7 @@ body.rtls.top-navigation .footer.fixed {
     }
 
 .content-tabs {
-    /*border-bottom: solid 2px #2f4050;*/
+    border-bottom: solid 2px #1ab394;
 }
 
 .page-tabs a {
