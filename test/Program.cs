@@ -1,4 +1,5 @@
-﻿using Amayer.Info.CL.Data;
+﻿using Amayer.Com.Com;
+using Amayer.Info.CL.Data;
 using Amayer.Info.CL.Models;
 using Chloe;
 using Chloe.SqlServer;
@@ -16,56 +17,45 @@ namespace test
     {
         static void Main(string[] args)
         {
-            //private static readonly string connstr = ConfigurationManager.ConnectionStrings["connstr"].ConnectionString;
-            //Data Source=121.42.151.160;Initial Catalog=HuiPu;Persist Security Info=True;User ID=sa;Password=***********;MultipleActiveResultSets=True;Application Name=EntityFramework
-            //string sql = "select id ,Sort from AdminMenus ";
-            //StringBuilder sb = new StringBuilder();
-            //DataTable table = new DataTable();
-            //using (SqlConnection conn = new SqlConnection("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;Persist Security Info=True;user id=bds258291696;password=12345687;MultipleActiveResultSets=True;Application Name=EntityFramework"))
+
+
+            //var db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
+
+            ////AdminMenu
+            //IQuery<AdminMenu> q = db.Query<AdminMenu>();
+            //var s = q.ToList();
+            //foreach (var item in s)
             //{
-            //    conn.Open();
-            //    using (SqlCommand cmd = conn.CreateCommand())
-            //    {
-
-            //        cmd.CommandText = sql;
-            //        using (SqlDataReader reader = cmd.ExecuteReader())
-            //        {
-
-            //            table.Load(reader);
-            //        }
-            //    }
-            //    for (int i = 0; i < table.Rows.Count; i++)
-            //    {
-            //        string temp = "update AdminMenus set Sort =" + (i + 1) + " where id =" + table.Rows[i]["id"] + ";";
-            //        sb.Append(temp);
-            //    }
-            //    using (SqlCommand cmd = conn.CreateCommand())
-            //    {
-            //        cmd.CommandText = sb.ToString();
-
-            //        int count = cmd.ExecuteNonQuery();
-            //        Console.WriteLine(count);
-            //    }
-
+            //    Console.WriteLine(item.Name);
             //}
-            //Console.WriteLine();
-
-
-
-
-            //Console.WriteLine(sb.ToString());
-
-
-            var db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
-
-            //AdminMenu
-            IQuery<AdminMenu> q = db.Query<AdminMenu>();
-            var s = q.ToList();
-            foreach (var item in s)
-            {
-                Console.WriteLine(item.Name);
-            }
+            //  StudentSecond ss = Mapper<Student, StudentSecond>.Trans(s)；
+            Student stu = new Student();
+            stu.Id = 1;
+            stu.Name = "你好";
+            stu.Age = 12;
+            stu.Gender = false;
+            var stuC = Mapper<Student, StudentViewModel>.Trans(stu);
             Console.ReadKey();
         }
+
+
+        
+    }
+
+    public class Student
+    {
+        public int Id { get; set; }
+        public  string Name { get; set; }
+        public int Age { get; set; }
+        public bool Gender { get; set; }
+    }
+    public class StudentViewModel
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public bool Gender { get; set; }
+        public int? Status { get; set; }
     }
 }
+

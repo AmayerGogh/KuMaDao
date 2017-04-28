@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Amayer.Com.Com
 {
     //调用
-    //调用： StudentSecond ss =TransExpV2<Student,StudentSecond>.Trans(s)；
+    //调用： StudentSecond ss =Mapper<Student,StudentSecond>.Trans(s)；
     public static class Mapper<TIn, TOut>
     {
         private static readonly Func<TIn, TOut> cache = GetFunc();
@@ -16,6 +16,7 @@ namespace Amayer.Com.Com
         {
             ParameterExpression parameterExpression = Expression.Parameter(typeof(TIn), "p");
             List<MemberBinding> memberBindingList = new List<MemberBinding>();
+
 
             foreach (var item in typeof(TOut).GetProperties())
             {
@@ -38,5 +39,8 @@ namespace Amayer.Com.Com
             return cache(tIn);
         }
 
+        
     }
+
+   
 }
