@@ -1,12 +1,13 @@
-﻿using System;
+﻿using Amayer.Utility.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Amayer.Com.Entity;
 
-namespace Amayer.Com.Com
+
+namespace Amayer.Utility
 {
     class EventH
     {

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Amayer.Info.CL.Models
 {
-   public class AdminMenu
+   public class AdminMenu: BaseEntity
     {        
-        public int Id { get; set; }
+   
         [MaxLength(32)]
         public string Name { get; set; }        
         public string Icon { get; set; }        
@@ -18,8 +18,7 @@ namespace Amayer.Info.CL.Models
         public string Area { get; set; } 
         public string Description { get; set; }
         public int ParentId { get; set; }
-        public int Sort { get; set; }
         public bool IsFinal { get; set; }
-        public int Status { get; set; }
+
     }
 }

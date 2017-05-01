@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Amayer.Com.Com
+namespace Amayer.Utility
 {
     public class XmlHelper
     {

@@ -1,0 +1,15 @@
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Amayer.Test.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Amayer.Test.pdb
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.csprojResolveAssemblyReference.cache
+E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.dll
+E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.pdb

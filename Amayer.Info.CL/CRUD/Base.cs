@@ -7,51 +7,56 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Amayer.Info.CL.CRUD
 {
-    public class Base<T> where T : class
+    public class Base<T> where T : BaseEntity
     {
         //private IDbConnection db;
         //public Base(IDbConnection db)
         //{
         //    this.db = db;
         //}
-
+        public IQuery<T> tt;
         private Chloe.SqlServer.MsSqlContext db;
         public Base(MsSqlContext db)
         {
             this.db = db;
+            tt = db.Query<T>();
         }
 
-        public IQuery<T> GetList<T>()
+        public IQuery<T> GetList<S>()
         {          
-            IQuery<T> q = db.Query<T>();
-            return q;
+            return tt;
+        }
+        public T GetListById<S>(int id)
+        {
+            return  tt.Where(m => m.Id == id).FirstOrDefault();
+        }
+        public IQuery<T> GetListByWhere<S>(Expression<Func<T,bool>> where)
+        {
+            return tt.Where(where);
         }
 
-     
-
-        //public IEnumerable<T> GetList(string table, string wherever)
-        //{
-        //    var sql = "select * from @t where @wherever ".Replace("@t", table);
-        //    return db.Query<T>(sql, new { wherever = wherever});
-        //}
+        public S Insert<S>(S s)
+        {
+           return  db.Insert(s);
+        }
 
 
-
-        //public IEnumerable<T> GetList(string table)
-        //{
-
-        //    var sql = "select * from @t ".Replace("@t", table);
-        //    return db.Query<T>(sql);
-        //}
+        public IQuery<T> Page<S>(int pageNumber, int pageSize)
+        {
+           return tt.TakePage(pageNumber,pageSize);
+        }
 
 
+      
+      
     }
 
+    
 
-   
 }

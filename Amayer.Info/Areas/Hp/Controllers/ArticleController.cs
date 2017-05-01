@@ -40,7 +40,7 @@ namespace Amayer.Info.Areas.Hp.Controllers
                          Clicks = list.Clicks,
                          CreateTime = list.CreateTime,
                          IsClosed = list.IsClosed,
-                         Status = list.Status
+                        // Status = list.Status
                      }).ToList();
 
 

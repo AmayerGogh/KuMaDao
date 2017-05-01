@@ -16,6 +16,7 @@ namespace Amayer.Info.CL.Data
         {
             Database.SetInitializer<AmayerDBContext>(null);
             this.Configuration.ProxyCreationEnabled = false;
+         
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

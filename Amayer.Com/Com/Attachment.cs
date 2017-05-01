@@ -7,10 +7,10 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Amayer.Com.Entity;
 using Amayer.Utility;
+using Amayer.Utility.Entity;
 
-namespace Amayer.Com.Com
+namespace Amayer.Utility
 {
     public class HcRequest
     {
@@ -81,7 +81,7 @@ namespace Amayer.Com.Com
                 StringBuilder paramBuilder = new StringBuilder();
                 foreach (var item in parameters)
                 {
-                    paramBuilder.AppendFormat("{0}={1}&", item.Key, item.Value);
+                    paramBuilder.AppendFormat("{0}={1}&", item._key, item._value);
                 }
                 var paramStr = paramBuilder.ToString().TrimEnd('&');
                 byte[] paramArray = Encoding.Default.GetBytes(paramStr);

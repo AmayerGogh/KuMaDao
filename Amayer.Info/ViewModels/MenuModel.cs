@@ -17,7 +17,7 @@ namespace Amayer.Info.ViewModels
 
     public class Menu
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Icon { get; set; }
         public string Name { get; set; }
         public string Controller { get; set; }

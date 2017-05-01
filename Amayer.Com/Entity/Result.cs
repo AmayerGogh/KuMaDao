@@ -5,7 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amayer.Com.Entity
+namespace Amayer.Utility.Entity
 {
     public class Result
     {
@@ -18,6 +18,21 @@ namespace Amayer.Com.Entity
         /// 消息
         /// </summary>
         public string Message { get; set; }
+      
+    }
+
+    public class JsonResult
+    {
+        /// <summary>
+        /// 状态 -1=错误, 0=失败, 1=成功
+        /// </summary>
+        public int Status { get; set; }
+
+        /// <summary>
+        /// 消息
+        /// </summary>
+        public string Message { get; set; }
+        public object Data { get; set; }
     }
     public class PushResult
     {
@@ -86,7 +101,8 @@ namespace Amayer.Com.Entity
 
     public class KV
     {
-        public string Key { get; set; }
-        public string Value { get; set; }
+        public int _key { get; set; }
+        public string _value { get; set; }
     }
+  
 }

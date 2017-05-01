@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amayer.Com.Com
+namespace Amayer.Utility
 {
     class SecurityProvider
     {

@@ -55,6 +55,9 @@
       <HintPath>..\packages\Dapper.1.50.2\lib\net451\Dapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.0.1011, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.0\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -953,6 +956,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Amayer.Com\Amayer.Utility.csproj">
+      <Project>{e636eeed-1e79-4968-8cce-1b4451f0e197}</Project>
+      <Name>Amayer.Utility</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Amayer.Info.CL\Amayer.Info.CL.csproj">
       <Project>{bacd2b75-f28b-44e2-9019-346c0da8f255}</Project>
       <Name>Amayer.Info.CL</Name>

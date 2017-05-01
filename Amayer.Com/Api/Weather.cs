@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Amayer.Utility;
+using Amayer.Utility.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Amayer.Com.Com;
-using Amayer.Com.Entity;
+
 
 namespace Amayer.Com.Api
 {

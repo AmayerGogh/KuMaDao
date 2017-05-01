@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Amayer.Info.CL.Models
 {
-   public class Lable
+   public class Lable: BaseEntity
     {
-        public int Id { get; set; }
+     
         public int ArticleId { get; set; }
         public string Name { get; set; }
     }

@@ -1,4 +1,5 @@
-﻿using Amayer.Com.Com;
+﻿
+using Amayer.Info.CL.CRUD;
 using Amayer.Info.CL.Data;
 using Amayer.Info.CL.Models;
 using Chloe;
@@ -18,7 +19,7 @@ namespace test
         static void Main(string[] args)
         {
 
-
+            MsSqlContext db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
             //var db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
 
             ////AdminMenu
@@ -34,7 +35,19 @@ namespace test
             stu.Name = "你好";
             stu.Age = 12;
             stu.Gender = false;
-            var stuC = Mapper<Student, StudentViewModel>.Trans(stu);
+            // var stuC = Mapper<Student, StudentViewModel>.Trans(stu);
+
+            var en = new AdminMenuCRUD(db);
+            var s = en.GetListById<AdminMenu>(1);
+            var ss = en.GetListByWhere<AdminMenu>(m => m.Id != 0&&m.Id!=100).ToList();
+            foreach (var item in ss)
+            {
+                Console.WriteLine(item.Id);
+            }            
+            var p = en.Page<AdminMenu>(2, 2).ToList();
+            AdminMenu model = new AdminMenu();
+            model.Name = "5";
+            var mo = en.Insert<AdminMenu>(model);
             Console.ReadKey();
         }
 

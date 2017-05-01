@@ -55,7 +55,7 @@ a:focus {
 }
 
 .nav.navbar-right > li > a {
-    color: #999c9e;
+    color: #ffffff;
 }
 
 .nav > li.active > a {
@@ -390,15 +390,16 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 
 .navbar-fixed-top,
 .navbar-static-top {
-    background: #040404;
+   background: #1ab394;
+ 
 }
 
 .nav li a span.nav-label{
     margin-left:10px;
 }
 .fixed-nav #wrapper {
-  
     box-sizing: border-box;
+    padding-top: 50px;
 }
 
 .fixed-nav .minimalize-styl-2 {
@@ -3355,9 +3356,8 @@ body {
     font-family: "Microsoft YaHei";
     background-color: #171717;
     font-size: 13px;
-    color: #676a6c;
+    color: #ffffff;
     overflow-x: hidden;
-  
 }
 
 html,
@@ -3705,7 +3705,7 @@ nav.page-tabs {
 }
 
 .fixed-nav #content-main {
-    height: calc(100% - 80px);
+    height: calc(100% - 42px);
     overflow: hidden;
 }
 
@@ -7139,9 +7139,7 @@ body.rtls.top-navigation .footer.fixed {
         background: #ce8735;
     }
 
-.content-tabs {
-    border-bottom: solid 2px #1ab394;
-}
+
 
 .page-tabs a {
     color: #999;

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Amayer.Info.CL.Models
 {
-   public class WebInfo
+   public class WebInfo: BaseEntity
     {
-        public int Id { get; set; }
+      
         public string Key { get; set; }
         public string Value { get; set; }
 

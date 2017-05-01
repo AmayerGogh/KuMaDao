@@ -7,7 +7,7 @@ namespace Amayer.Info.Areas.Hp.ViewModel
 {
     public class ArticleViewModels
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         //首级分类
         public int Navigation { get; set; }
         //分类
@@ -33,6 +33,6 @@ namespace Amayer.Info.Areas.Hp.ViewModel
         //是否是已完结
         public bool IsClosed { get; set; }
 
-        public bool Status { get; set; }
+        public int Status { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amayer.Com.Entity
+namespace Amayer.Utility.Entity
 {
     #region 百度IP
     public class BaiduIPInfo

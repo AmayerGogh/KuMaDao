@@ -14,10 +14,16 @@ namespace Amayer.Info
     {
         protected void Application_Start()
         {
+          
             AreaRegistration.RegisterAllAreas();          
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);          
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+            ModelBinders.Binders.Add(typeof(string), new Amayer.Utility.MVC.TrimToDBCModelBinder());
+      
+            log4net.Config.XmlConfigurator.Configure();
         }
 
         protected void Application_BeginRequest()

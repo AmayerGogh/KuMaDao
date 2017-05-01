@@ -75,6 +75,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdminMenu.cs" />
     <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\BaseEntity.cs" />
     <Compile Include="Models\Lable.cs" />
     <Compile Include="Models\Log.cs" />
     <Compile Include="Models\Navigations.cs" />

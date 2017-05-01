@@ -22,9 +22,9 @@ namespace Amayer.Info.Controllers
             //dapper的用法
             //var entity = new AdminMenuCRUD(DapperMsg.DbContext);
          
-            var en =  new ArticleCRUD(CholeMsg.DbContext);
-            var re = en.GetList<AdminMenu>().ToList();
-          
+            var en =  new AdminMenuCRUD(CholeMsg.DbContext);
+            var s = en.GetListById<AdminMenu>(1);
+            var ss = en.GetListByWhere<AdminMenu>(m => m.Id == 1).FirstOrDefault();
             return View(model);
         }
 

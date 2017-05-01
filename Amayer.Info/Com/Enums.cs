@@ -9,6 +9,4 @@ namespace Amayer.Info.Com
     {
     
     }
-
-   
 }

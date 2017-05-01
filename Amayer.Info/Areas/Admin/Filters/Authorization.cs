@@ -69,7 +69,7 @@ namespace Amayer.Info.Areas.Admin.Filters
                 //httpContext.Session.Add("AdminMenu", list);
             }
 
-            menuModels.Menus = list.Where(model => model.ParentId == 0 && model.Status == 1).Select(model => new Menu
+            menuModels.Menus = list.Where(model => model.ParentId == 0 ).Select(model => new Menu  //&& item.Status == 1
             {
                 Id = model.Id,
                 Icon = model.Icon,
@@ -79,7 +79,7 @@ namespace Amayer.Info.Areas.Admin.Filters
                 Controller = model.Controller,
                 Area = model.Area,
                 IsFinal = model.IsFinal,
-                Children = model.IsFinal ? null : list.Where(item => item.ParentId == model.Id && item.Status == 1).ToList()
+                Children = model.IsFinal ? null : list.Where(item => item.ParentId == model.Id ).ToList() //&& item.Status == 1
             }).ToList();
 
             //if (ControllerName == "error")

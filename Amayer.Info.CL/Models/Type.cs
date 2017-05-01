@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Amayer.Info.CL.Models
 {
-   public class BaseType
+   public class BaseType: BaseEntity
     {
-        public int Id { get; set; }
+      
 
         public string Name { get; set; } 
         public string ParentId { get; set; }

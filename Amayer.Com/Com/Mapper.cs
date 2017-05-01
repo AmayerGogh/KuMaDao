@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amayer.Com.Com
+namespace Amayer.Utility
 {
     //调用
     //调用： StudentSecond ss =Mapper<Student,StudentSecond>.Trans(s)；
