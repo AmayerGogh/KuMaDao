@@ -13,3 +13,4 @@ E:\Demo\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFr
 E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.csprojResolveAssemblyReference.cache
 E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.dll
 E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.pdb
+D:\MyCode\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.csprojResolveAssemblyReference.cache
