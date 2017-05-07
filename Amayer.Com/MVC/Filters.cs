@@ -6,23 +6,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
-namespace Amayer.Utility.MVC
+namespace Amayer.Utility.Filters
 {
-   public class Filter
+    /// <summary>
+    /// 
+    /// </summary>
+    public  class Net2JsonFilter : ActionFilterAttribute
     {
-     
-        public void LogError(ILog log,Exception ex)
+        public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
-            log.Error("出现未处理异常" + ex);
+            filterContext.Result = new FilterExtension().Net2Json(filterContext.Result);
+
         }
-       
-        public ActionResult Net2JsonFilter(ActionResult Result)
+    }
+   
+    class FilterExtension
+    {
+      
+
+        public ActionResult Net2Json(ActionResult Result)
         {
             //把 filterContext.Result从JsonResult换成JsonNetResult
             //filterContext.Result值得就是Action执行返回的ActionResult对象
 
-            if (Result is JsonResult
-                && !(Result is JsonNetResult))
+            if (Result is JsonResult && !(Result is JsonNetResult))
             {
                 JsonResult jsonResult = (JsonResult)Result;
                 JsonNetResult jsonNetResult = new JsonNetResult();
@@ -36,6 +43,5 @@ namespace Amayer.Utility.MVC
             }
             return Result;
         }
-
     }
 }

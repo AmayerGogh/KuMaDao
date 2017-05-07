@@ -92,6 +92,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -153,11 +156,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App_Start\ActionFilter.cs" />
     <Compile Include="App_Start\AuthorizeFilter.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -175,6 +173,7 @@
     <Compile Include="Areas\Hp\Controllers\HomeController.cs" />
     <Compile Include="Areas\Hp\HpAreaRegistration.cs" />
     <Compile Include="Areas\Hp\ViewModel\ArticleViewModels.cs" />
+    <Compile Include="Areas\Hp\ViewModel\Com.cs" />
     <Compile Include="Com\Enums.cs" />
     <Compile Include="Com\WebHelper.cs" />
     <Compile Include="Controllers\AjaxController.cs" />
@@ -249,7 +248,8 @@
     <Content Include="libs\css\plugins\blueimp\img\play-pause.svg" />
     <Content Include="libs\css\plugins\blueimp\img\video-play.png" />
     <Content Include="libs\css\plugins\blueimp\img\video-play.svg" />
-    <Content Include="libs\css\plugins\bootstrap-table\bootstrap-table.min.css" />
+    <Content Include="libs\css\plugins\bootstrap-table\bootstrap-table.css" />
+    <Content Include="libs\css\plugins\bootstrap-table\bootstrap-table.js" />
     <Content Include="libs\css\plugins\chosen\chosen-sprite%402x.png" />
     <Content Include="libs\css\plugins\chosen\chosen-sprite.png" />
     <Content Include="libs\css\plugins\chosen\chosen.css" />
@@ -897,6 +897,8 @@
     <Content Include="Areas\Hp\Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Areas\Hp\Views\Home\APage.cshtml" />
     <Content Include="Areas\Hp\Views\Article\Index.cshtml" />
+    <Content Include="Areas\Hp\Views\Article\没有用.cshtml" />
+    <Content Include="Areas\Hp\Views\Article\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\com11.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.min.js" />

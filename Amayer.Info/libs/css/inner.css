@@ -2,20 +2,14 @@
 /* FOOTER */
 
 body {
-    background-color: #000;
+    /*background-color: #000;*/
 }
 table {
     background-color: #1f1f1f;
 }
-.table > tbody > tr > td, .table > tbody > tr > th {
-    border-top: 2px solid rgba(0, 0, 0, 0.93);
-}
-.table > thead > tr > th {
-    border: 2px solid #000000;
-}
+
 .table-hover > tbody > tr:hover, .table-hover > thead > tr > th:hover {
-    background-color: #2f2f2f;
-    z-index: 3;
+ 
 }
 
 
@@ -61,6 +55,14 @@ table {
     font-size: 25px;
 }
 
+.header {
+    position: fixed;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.13);
+    width: 100%;
+    z-index: 3;
+}
+
 /*.foot_icon_descript {
     font-size: 12px;
     margin-top: 12px;
@@ -76,3 +78,34 @@ table {
     transition: height 0.8s;
 }
 
+
+.limitline1 {
+    /* white-space: normal!important; */
+    /* text-overflow: ellipsis; */
+    /* word-wrap: break-word; */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.limitline2 {
+    /* white-space: normal!important; */
+    /* text-overflow: ellipsis; */
+    /* word-wrap: break-word; */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+input[type="checkbox"]{
+    height:20px;
+    width:20px;
+}
+
+btn-dark {
+    background: #1f1f1f;
+}
+btn-dark:hover {
+    background: #2f2f2f;
+    border:2px solid #fff;
+}

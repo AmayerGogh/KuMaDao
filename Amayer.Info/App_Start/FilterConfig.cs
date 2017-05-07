@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Amayer.Info.App_Start;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Amayer.Info
@@ -8,9 +9,9 @@ namespace Amayer.Info
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-            //GlobalFilters.Filters.Add(new Amayer.Utility.MVC.)
-           // filters.Add(new Amayer.Utility.MVC.ErrorFilter());
-           // filters.Add(new Amayer.Utility)
+            filters.Add(new ActionFilter());       
+            filters.Add(new ErrorFilter());
+           
         }
     }
 }

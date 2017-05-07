@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Hp/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+<div class=" header" style="background: rgb(31, 31, 31);">
+    <div class="col-md-4 col-lg-4 ">
+        <ol class="breadcrumb">
+            <li><a href="~/">管理首页</a></li>
+            <li><a href="#">文章管理</a></li>
+            <li class="active"><strong>文章列表</strong></li>
+        </ol>
+    </div>
+    <div class="col-md-12 col-lg-12 ">
+
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a data-toggle="tab" href="#tab-1" aria-expanded="true"> 第一个选项卡</a>
+            </li>
+            <li class="">
+                <a data-toggle="tab" href="#tab-2" aria-expanded="false">第二个选项卡</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="wrapper wrapper-content animated fadeIn" style="height:2000px" >
+
+    <div class="tabs-container" style="    margin-top: 70px;">
+       
+        <div class="tab-content">
+            <div id="tab-1" class="tab-pane active">
+                <div class="panel-body">
+                    <strong>HTML5 文档类型</strong>
+                    <p>Bootstrap 使用到的某些 HTML 元素和 CSS 属性需要将页面设置为 HTML5 文档类型。在你项目中的每个页面都要参照下面的格式进行设置。</p>
+                </div>
+            </div>
+            <div id="tab-2" class="tab-pane">
+                <div class="panel-body">
+                    <strong>移动设备优先</strong>
+                    <p>在 Bootstrap 2 中，我们对框架中的某些关键部分增加了对移动设备友好的样式。而在 Bootstrap 3 中，我们重写了整个框架，使其一开始就是对移动设备友好的。这次不是简单的增加一些可选的针对移动设备的样式，而是直接融合进了框架的内核中。也就是说，Bootstrap 是移动设备优先的。针对移动设备的样式融合进了框架的每个角落，而不是增加一个额外的文件。</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="container-fluid" id="list" style="margin-top: 100px;margin-bottom: 100px;">
+
+       
+
+
+
+    </div>
+
+
+
+</div>
+<div class="footer fixed frosted-glass">
+
+
+    <ul class="nav navbar-nav  navbar-right">
+       
+        <li><a href="#"><span class="glyphicon glyphicon-share-alt" aria-hidden="true">返回</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-resize-full" aria-hidden="true">全屏</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-repeat" aria-hidden="true">撤销</span></a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-saved" aria-hidden="true">保存</span></a></li>
+        <li id="btn_buttomNavBar"><a href="#"><i class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></i></a></li>
+   
+    </ul>
+</div>
+

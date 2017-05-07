@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace Amayer.Info.Areas.Hp.Controllers
 {
+ 
     public class ArticleController : Controller
     {
         // GET: Hp/Article
@@ -18,15 +19,18 @@ namespace Amayer.Info.Areas.Hp.Controllers
             return View();
         }
 
-
-        public ActionResult GetList()
+        [Utility.Filters.Net2JsonFilter]
+        public ActionResult GetList(BsTableResponseModel param)
         {
-
-            var model = new  List< ArticleViewModels>();          
+            BsTableResultModel<ArticleViewModel> model = new BsTableResultModel<ArticleViewModel>();         
             var en = new ArticleCRUD(CholeMsg.DbContext);
-            var re = en.GetList<Article>().ToList();
-            model = (from list in re
-                     select new ArticleViewModels
+            //public int offset { get; set; } //从第几个开始
+            //public int limit { get; set; } // 多少个
+            model.total = en.Count<Article>();
+            var re = en.Page<Article>(param.offset, param.limit).ToList(); //第几页  多少个
+           
+            model.rows = (from list in re
+                     select new ArticleViewModel
                      {
                          Id = list.Id,
                          Navigation = list.Navigation,
@@ -39,16 +43,20 @@ namespace Amayer.Info.Areas.Hp.Controllers
                          Style = list.Style,
                          Clicks = list.Clicks,
                          CreateTime = list.CreateTime,
-                         IsClosed = list.IsClosed,
-                        // Status = list.Status
+                         IsClosed = list.IsClosed,                       
                      }).ToList();
 
 
 
            // model= TinyMapper.Map<Article,ArticleViewModels>(re);           
-            return Json(model,JsonRequestBehavior.AllowGet);
+            return Json(model);
            // return Json(TinyMapper.Map<ArticleViewModels>(new ArticleCRUD(CholeMsg.DbContext).GetList<Article>().ToList()), JsonRequestBehavior.AllowGet);
 
+        }
+
+        public ActionResult Edit(int? id)
+        {
+            return View();
         }
     }
 }

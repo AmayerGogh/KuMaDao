@@ -1,0 +1,191 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Hp/Views/Shared/_LayoutPage.cshtml";
+}
+@section scripts{
+    <script src="https://cdn.bootcss.com/vue/2.1.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-resource/1.2.0/vue-resource.min.js"></script>
+    <script>
+        (function (window, $, undefined) {
+
+            var defaults = {
+                url: "/",
+                page:"1",
+                prevText: "上一页",
+                nextText: "下一页",
+                buildPageUrl: null,
+                onPageChanged: null
+            }
+            function methods() {
+
+            };
+            methods.prototype = {
+                say: function () {
+
+                }
+            }
+
+            $.fn.vueTables = function (options) {
+                console.log($(this).html())
+                options = $.extend(defaults, options);
+                console.log(options);
+                //return new vueTables($(this), options);
+                return new methods();
+            };
+
+
+
+        })(window,$);
+        $(function () {
+            $(".table").vueTables({
+                msg: "666",
+            })
+
+          var t =  new Vue({
+                el: "#list",
+                data: {
+                    datalist:[]
+                },
+                filters: {
+
+                },
+                mounted: function () {
+                    this.$nextTick(function () {
+                        this.init();
+                    })
+                },
+                methods: {
+                    init: function () {
+                        this.$http.get("/hp/article/getlist", {})
+                            .then((response) => {
+                                console.log(response.data);
+                                this.datalist = response.data;
+                            })
+                            .catch(function (response) {
+                                console.log(response.data);
+                            })
+                    },
+                    log: function () {
+                        console.log(this.datalist);
+                        alert(1);
+                    }
+                }
+            })
+
+        })
+    </script>
+
+}
+
+
+<div class="row  page-heading" style="background-color: #1f1f1f">
+    <div class="col-md-4 col-lg-4 ">
+        <ol class="breadcrumb">
+            <li><a href="~/">管理首页</a></li>
+            <li><a href="#">文章管理</a></li>
+            <li class="active"><strong>文章列表</strong></li>
+        </ol>
+    </div>
+    <div class="col-md-8 col-lg-8 text-right">
+        @*<div class="no-margin-bottom">
+                <a href="/subclient/edit" class="btn btn-sm btn-default">新咨询录入</a>
+                <a href="/subclient/package" class="btn btn-sm btn-default">家长办报名</a>
+                <a href="/" class="btn btn-sm btn-default">查看课程表</a>
+                <a href="/" class="btn btn-sm btn-default">家长发通知</a>
+                <a href="/subclient" class="btn btn-sm btn-default">查学生信息</a>
+                <a href="/courseware/" class="btn btn-sm btn-default">教案查看</a>
+                <a href="/" class="btn btn-sm btn-default">工资计算</a>
+                <a href="/" class="btn btn-sm btn-default">商品采购</a>
+            </div>*@
+        <ul class="nav navbar-nav  navbar-right">
+            <li id="btn_buttomNavBar"><a href="#">b</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#"><i class="fa fa-bus"></i></a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div style="height:2000px">
+
+    <div class="container-fluid" id="list" style="margin-top: 100px;">
+        <button v-on:click="log()">测试</button>
+
+        @*<table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item,index) in datalist">
+                        <th>{{item.Id}}</th>
+                        <td>{{item.Title}}</td>
+                        <td>{{item.Descript}}</td>
+                        <td>{{item.CreateTime}}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>twitter</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                        </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>fat</td>
+                    </tr>
+
+                </tbody>
+            </table>*@
+
+
+
+
+    </div>
+
+
+
+</div>
+
+

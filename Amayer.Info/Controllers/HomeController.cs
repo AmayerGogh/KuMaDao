@@ -23,8 +23,8 @@ namespace Amayer.Info.Controllers
             //var entity = new AdminMenuCRUD(DapperMsg.DbContext);
          
             var en =  new AdminMenuCRUD(CholeMsg.DbContext);
-            var s = en.GetListById<AdminMenu>(1);
-            var ss = en.GetListByWhere<AdminMenu>(m => m.Id == 1).FirstOrDefault();
+            var s = en.ListById<AdminMenu>(1);
+            var ss = en.ListByWhere<AdminMenu>(m => m.Id == 1).FirstOrDefault();
             return View(model);
         }
 

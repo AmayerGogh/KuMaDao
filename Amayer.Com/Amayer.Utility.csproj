@@ -109,7 +109,8 @@
     <Compile Include="Image\Image.cs" />
     <Compile Include="Log4Net\Log.cs" />
     <Compile Include="Com\Attribute.cs" />
-    <Compile Include="MVC\Filter.cs" />
+    <Compile Include="MVC\Filters.cs" />
+    <Compile Include="MVC\StaticHtml.cs" />
     <Compile Include="MVC\TrimToDBCModelBinder.cs" />
     <Compile Include="MVC\WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Amayer.Info.Areas.Hp.ViewModel
 {
-    public class ArticleViewModels
+    public class ArticleViewModel
     {
         public long Id { get; set; }
         //首级分类

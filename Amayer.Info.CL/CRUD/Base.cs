@@ -28,15 +28,23 @@ namespace Amayer.Info.CL.CRUD
             tt = db.Query<T>();
         }
 
-        public IQuery<T> GetList<S>()
+        public IQuery<T> List<S>()
         {          
             return tt;
         }
-        public T GetListById<S>(int id)
+        public T ListById<S>(int id)
         {
             return  tt.Where(m => m.Id == id).FirstOrDefault();
         }
-        public IQuery<T> GetListByWhere<S>(Expression<Func<T,bool>> where)
+        public int Count<S>()
+        {
+            return tt.Count();
+        }
+        public int Count<S>(Expression<Func<T, bool>> where)
+        {
+          return  tt.Where(where).Count();
+        }
+        public IQuery<T> ListByWhere<S>(Expression<Func<T,bool>> where)
         {
             return tt.Where(where);
         }
@@ -46,15 +54,34 @@ namespace Amayer.Info.CL.CRUD
            return  db.Insert(s);
         }
 
-
-        public IQuery<T> Page<S>(int pageNumber, int pageSize)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="S"></typeparam>
+        /// <param name="pageNumber">第几页</param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public IQuery<T> TakePage<S>(int pageNumber, int pageSize)
         {
+
            return tt.TakePage(pageNumber,pageSize);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="S"></typeparam>
+        /// <param name="offset">从第几页开始</param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public IQuery<T> Page<S>(int offset, int pageSize)
+        {
 
-      
-      
+            return tt.Skip(offset).Take(pageSize);
+        }
+
+
+
     }
 
     

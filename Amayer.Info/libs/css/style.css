@@ -46,7 +46,7 @@ a:focus {
 
 .nav > li > a {
     color: #a7b1c2;
-    padding: 14px 20px 14px 16px;
+    padding: 15px 20px 15px 16px;
 }
 
 .nav li > a {
@@ -124,7 +124,6 @@ body.body-small .navbar-top-links li:last-child {
 }
 
     .dropdown-menu > li > a {
-        border-radius: 3px;
         color: inherit;
         line-height: 25px;
         margin: 4px;
@@ -842,8 +841,8 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
         }
 
 .btn-default {
-    background-color: #c2c2c2;
-    border-color: #c2c2c2;
+    background-color: #1f1f1f;
+    border-color: #1f1f1f;
     color: #FFFFFF;
 }
 
@@ -852,8 +851,8 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
     .btn-default:active,
     .btn-default.active,
     .open .dropdown-toggle.btn-default {
-        background-color: #bababa;
-        border-color: #bababa;
+        background-color: #2f2f2f;
+        border-color: #2f2f2f;
         color: #FFFFFF;
     }
 
@@ -1357,8 +1356,8 @@ button.dim:active:before {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-    background-color: #f4f4f4;
-    border-color: #DDDDDD;
+    background-color: #2f2f2f;
+    border: 1px solid #2f2f2f;
     color: inherit;
     cursor: default;
     z-index: 2;
@@ -1366,8 +1365,8 @@ button.dim:active:before {
 
 .pagination > li > a,
 .pagination > li > span {
-    background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
+    background-color: #1f1f1f;
+    border: 1px solid #1f1f1f;
     color: inherit;
     float: left;
     line-height: 1.42857;
@@ -3354,7 +3353,6 @@ a.forum-item-title {
 
 body {
     font-family: "Microsoft YaHei";
-    background-color: #171717;
     font-size: 13px;
     color: #ffffff;
     overflow-x: hidden;
@@ -3587,12 +3585,7 @@ body.body-small .footer.fixed {
 }
 
 
-/* PANELS */
 
-.page-heading {
-    border-top: 0;
-    padding: 0px 20px 20px;
-}
 
 .panel-heading h1,
 .panel-heading h2 {
@@ -3605,7 +3598,7 @@ body.body-small .footer.fixed {
 .content-tabs {
     position: relative;
     /* height: 42px; */
-    background: #040404;
+    background: #1f1f1f;
     line-height: 40px;
 }
 
@@ -3628,7 +3621,7 @@ body.body-small .footer.fixed {
     }
 
     .content-tabs .roll-right {
-        right: 40px;
+        right: 0px;
         /*border-left: solid 1px #eee;*/
     }
 
@@ -3705,7 +3698,7 @@ nav.page-tabs {
 }
 
 .fixed-nav #content-main {
-    height: calc(100% - 42px);
+    height: calc(100% - 40px);
     overflow: hidden;
 }
 
@@ -3760,7 +3753,7 @@ nav.page-tabs {
     padding-bottom: 0;
 }
 
-.nav-tabs > li.active > a,
+/*.nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {
     -moz-border-bottom-colors: none;
@@ -3777,7 +3770,7 @@ nav.page-tabs {
     border-width: 1px;
     color: #555555;
     cursor: default;
-}
+}*/
 
 .nav.nav-tabs li {
     background: none;
@@ -3949,9 +3942,9 @@ img.circle-border {
 }
 
 .breadcrumb {
-  
     padding: 0;
-    margin-bottom: 0;
+    margin-top: 13px;
+    font-size: 18px;
 }
 
     .breadcrumb > li a {

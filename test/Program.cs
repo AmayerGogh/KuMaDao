@@ -38,8 +38,8 @@ namespace test
             // var stuC = Mapper<Student, StudentViewModel>.Trans(stu);
 
             var en = new AdminMenuCRUD(db);
-            var s = en.GetListById<AdminMenu>(1);
-            var ss = en.GetListByWhere<AdminMenu>(m => m.Id != 0&&m.Id!=100).ToList();
+            var s = en.ListById<AdminMenu>(1);
+            var ss = en.ListByWhere<AdminMenu>(m => m.Id != 0&&m.Id!=100).ToList();
             foreach (var item in ss)
             {
                 Console.WriteLine(item.Id);

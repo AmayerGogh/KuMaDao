@@ -10,14 +10,29 @@ namespace Amayer.Info.App_Start
     {
         void IActionFilter.OnActionExecuted(ActionExecutedContext filterContext)
         {
-            filterContext.Result = new Amayer.Utility.MVC.Filter().Net2JsonFilter(filterContext.Result);
+          
         }
 
 
 
         void IActionFilter.OnActionExecuting(ActionExecutingContext filterContext)
         {
-            throw new NotImplementedException();
+          
         }
     }
+
+
+    //public class Net2JsonFilter : IActionFilter
+    //{
+    //    public void OnActionExecuted(ActionExecutedContext filterContext)
+    //    {
+    //        filterContext.Result = new Amayer.Utility.MVC.Filter().Net2JsonFilter(filterContext.Result);
+          
+    //    }
+
+    //    public void OnActionExecuting(ActionExecutingContext filterContext)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
 }
