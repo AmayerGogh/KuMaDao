@@ -14,3 +14,8 @@ E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.csprojResolveAssemblyReference
 E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.dll
 E:\Demo\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.pdb
 D:\MyCode\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.csprojResolveAssemblyReference.cache
+D:\MyCode\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\MyCode\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\MyCode\KuMaDao\Amayer.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\MyCode\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.dll
+D:\MyCode\KuMaDao\Amayer.Test\obj\Debug\Amayer.Test.pdb
