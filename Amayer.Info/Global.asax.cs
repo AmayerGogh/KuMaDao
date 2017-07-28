@@ -1,4 +1,5 @@
-﻿using Chloe.SqlServer;
+﻿using Autofac;
+using Chloe.SqlServer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,6 +8,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Autofac.Integration.Mvc;
+using System.Reflection;
+
 
 namespace Amayer.Info
 {
@@ -24,6 +28,21 @@ namespace Amayer.Info
             ModelBinders.Binders.Add(typeof(string), new Amayer.Utility.MVC.TrimToDBCModelBinder());
       
             log4net.Config.XmlConfigurator.Configure();
+
+
+            //依赖注入
+            //var builder = new ContainerBuilder();
+            //SetupResolveRules(builder);
+            //builder.RegisterControllers(Assembly.GetExecutingAssembly());
+            //var container = builder.Build();
+            //DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+            
+            //AreaRegistration.RegisterAllAreas();
+            //WebApiConfig.Register(GlobalConfiguration.Configuration);
+            //FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            //RouteConfig.RegisterRoutes(RouteTable.Routes);
+            //BundleConfig.RegisterBundles(BundleTable.Bundles);
+            // AuthConfig.RegisterAuth();
         }
 
         protected void Application_BeginRequest()
