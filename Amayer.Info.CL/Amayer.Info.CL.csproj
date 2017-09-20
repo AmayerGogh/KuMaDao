@@ -33,6 +33,9 @@
     <Reference Include="Chloe">
       <HintPath>..\dll\Chloe.dll</HintPath>
     </Reference>
+    <Reference Include="Chloe.Extension">
+      <HintPath>..\dll\Chloe.Extension.dll</HintPath>
+    </Reference>
     <Reference Include="Chloe.SqlServer">
       <HintPath>..\dll\Chloe.SqlServer.dll</HintPath>
     </Reference>
@@ -50,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Services" />
     <Reference Include="System.Drawing" />
@@ -63,6 +67,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="TinyMapper, Version=2.0.0.40, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\TinyMapper.2.0.8\lib\net45\TinyMapper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Com\WebHelper.cs" />
@@ -72,25 +79,32 @@
     <Compile Include="Data\AmayerDBContext.cs" />
     <Compile Include="Data\ChloeData.cs" />
     <Compile Include="Data\DapperData.cs" />
+    <Compile Include="Dto\Admin\ArticleDto.cs" />
     <Compile Include="IFactory\IAdminMenuRepository.cs" />
     <Compile Include="IFactory\IBaseRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AdminMenu.cs" />
-    <Compile Include="Models\Article.cs" />
-    <Compile Include="Models\BaseEntity.cs" />
-    <Compile Include="Models\Lable.cs" />
-    <Compile Include="Models\Log.cs" />
-    <Compile Include="Models\Navigations.cs" />
-    <Compile Include="Models\Type.cs" />
-    <Compile Include="Models\User.cs" />
-    <Compile Include="Models\WebInfo.cs" />
+    <Compile Include="Entities\AdminMenu.cs" />
+    <Compile Include="Entities\Article.cs" />
+    <Compile Include="Entities\Base\BaseEntity.cs" />
+    <Compile Include="Entities\Lable.cs" />
+    <Compile Include="Entities\Log.cs" />
+    <Compile Include="Entities\Navigations.cs" />
+    <Compile Include="Entities\Type.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\WebInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Amayer.Com\Amayer.Utility.csproj">
+      <Project>{E636EEED-1E79-4968-8CCE-1B4451F0E197}</Project>
+      <Name>Amayer.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

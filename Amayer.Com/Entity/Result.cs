@@ -12,12 +12,12 @@ namespace Amayer.Utility.Entity
         /// <summary>
         /// 状态 -1=错误, 0=失败, 1=成功
         /// </summary>
-        public int Status { get; set; }
+        public int status { get; set; }
 
         /// <summary>
         /// 消息
         /// </summary>
-        public string Message { get; set; }
+        public string message { get; set; }
       
     }
 

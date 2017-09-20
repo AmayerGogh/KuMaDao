@@ -2,7 +2,8 @@
 /* FOOTER */
 
 body {
-    /*background-color: #000;*/
+   
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 table {
     background-color: #1f1f1f;

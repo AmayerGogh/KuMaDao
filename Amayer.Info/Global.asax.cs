@@ -10,7 +10,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac.Integration.Mvc;
 using System.Reflection;
-
+using Amayer.Info.CL.Data;
 
 namespace Amayer.Info
 {
@@ -50,65 +50,23 @@ namespace Amayer.Info
             //请求开始之前创建本次请求用到的DbContext
             //One DbContext Per Request
             //DbContext不是线程安全的
-            CholeMsg.CreateDbContext();
+            // CholeMsg.CreateDbContext();
+            HttpContext.Current.Items["IDbConnection"] =  ChloeData.Init();
         }
 
         protected void Application_EndRequest()
         {
 
+           var con = (Chloe.IDbContext)HttpContext.Current.Items["IDbConnection"];
+            if (con!=null)
+            {
+                con.Dispose();
+            }
             //本次请求结束销毁DbContext
-            CholeMsg.FinishDbContext();
+          //  CholeMsg.FinishDbContext();
         }
     }
 
-    public class DapperMsg
-    {
-        private const string IDbConnection = "IDbConnection";
-        public static void CreateDbContext()
-        {
-            IDbConnection db = CL.Data.DapperData.QueryDB();
-            System.Web.HttpContext.Current.Items[IDbConnection] = db;
-        }
-        public static IDbConnection DbContext
-        {
-            //todo    
-            get
-            {
-                return (IDbConnection)HttpContext.Current.Items[IDbConnection];
-            }
-        }
-        /// <summary>
-        /// 销毁DbContext
-        /// </summary>
-        public static void FinishDbContext()
-        {
-            DbContext.Dispose();
-        }
-    }
-
-    public class CholeMsg
-    {
-        private const string IDbConnection = "IDbConnection";
-        public static void CreateDbContext()
-        {
-            MsSqlContext db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
-            System.Web.HttpContext.Current.Items[IDbConnection] = db;
-        }
-        public static MsSqlContext DbContext
-        {
-            //todo    
-            get
-            {
-                return (MsSqlContext)HttpContext.Current.Items[IDbConnection];
-            }
-        }
-        /// <summary>
-        /// 销毁DbContext
-        /// </summary>
-        public static void FinishDbContext()
-        {
-            DbContext.Dispose();
-        }
-    }
+ 
 
 }

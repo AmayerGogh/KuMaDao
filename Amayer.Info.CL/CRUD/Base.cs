@@ -1,5 +1,6 @@
-﻿using Amayer.Info.CL.IFactory;
-using Amayer.Info.CL.Models;
+﻿using Amayer.Info.CL.Entities;
+using Amayer.Info.CL.IFactory;
+using Amayer.Utility.Entity;
 using Chloe;
 using Chloe.SqlServer;
 using Dapper;
@@ -16,70 +17,131 @@ namespace Amayer.Info.CL.CRUD
 {
     public class Base<T> where T : BaseEntity
     {
-        //private IDbConnection db;
-        //public Base(IDbConnection db)
-        //{
-        //    this.db = db;
-        //}
-        public IQuery<T> tt;
-        private Chloe.SqlServer.MsSqlContext db;
-        public Base(MsSqlContext db)
+      
+        private IDbContext db;
+        public Base()
         {
-            this.db = db;
-            tt = db.Query<T>();
+            if (db == null)
+            {
+                db = Data.ChloeData.Init();
+            }
+        }
+        public Base(Chloe.IDbContext cc)
+        {
+            this.db = cc;
+        }
+        ~Base()
+        {
+            if (db != null)
+            {
+                db.Dispose();
+            }
         }
 
-        public IQuery<T> List<S>()
-        {          
-            return tt;
-        }
-        public T ListById<S>(int id)
+        protected T Single(Expression<Func<T, bool>> predicate)
         {
-            return  tt.Where(m => m.Id == id).FirstOrDefault();
-        }
-        public int Count<S>()
-        {
-            return tt.Count();
-        }
-        public int Count<S>(Expression<Func<T, bool>> where)
-        {
-          return  tt.Where(where).Count();
-        }
-        public IQuery<T> ListByWhere<S>(Expression<Func<T,bool>> where)
-        {
-            return tt.Where(where);
+            return db.Query<T>().FirstOrDefault(predicate);
         }
 
-        public S Insert<S>(S s)
+        protected IQuery<T> List()
         {
-           return  db.Insert(s);
+            return db.Query<T>();
+        }
+        protected IQuery<T> Where(Expression<Func<T, bool>> predicate)
+        {
+            return db.Query<T>().Where(predicate);
+        }
+        protected int Count()
+        {
+            return db.Query<T>().Count();
+        }
+        protected int Count(Expression<Func<T, bool>> where)
+        {
+          return db.Query<T>().Where(where).Count();
+        }
+        protected IQuery<T> List(Expression<Func<T, bool>> predicate,int offset, int limit, out int count, Expression<Func<T, bool>> orderBy, Expression<Func<T, bool>> thenBy = null)
+        {
+            var ccc = db.Query<T>();
+            count = ccc.Count();
+            if (thenBy == null)
+            {
+                return ccc.OrderBy(orderBy).Skip(offset).Take(limit);
+            }
+            else
+            {
+                return ccc.OrderBy(orderBy).ThenBy(thenBy).Skip(offset).Take(limit);
+            }
+        }
+        protected IQuery<T> List(Expression<Func<T, bool>> predicate,int offset, int limit, out int count,string orderBy)
+        {
+            var ccc = db.Query<T>();
+            count = ccc.Count();
+            if (string.IsNullOrWhiteSpace( orderBy))
+            {
+                return ccc.Skip(offset).Take(limit);
+            }
+            return ccc.OrderBy(orderBy).Skip(offset).Take(limit);
+            
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="S"></typeparam>
-        /// <param name="pageNumber">第几页</param>
-        /// <param name="pageSize"></param>
-        /// <returns></returns>
-        public IQuery<T> TakePage<S>(int pageNumber, int pageSize)
+        protected IQuery<T> ListSelect(Expression<Func<T, bool>> predicate, int offset, int limit, Expression<Func<T, T>> selector)
         {
+              return db.Query<T>().Where(predicate).OrderBy(m => m.Id).Skip(offset).Take(limit).Select(selector);
+        }
+        protected T Insert(T t)
+        {
+           return  db.Insert(t);
+        }
+        protected Result AddRange(List<T> t)
+        {
+            try
+            {
+                foreach (var item in t)
+                {
+                    db.Insert(item);
+                }
+                return new Result() { status = 1 };
+            }
+            catch (Exception e)
+            {
+                return new Result() { message = e.ToString() };
+            }
+        }
+        protected int Add(Expression<Func<T>> content)
+        {
+            return (int)db.Insert(content);
+           
 
-           return tt.TakePage(pageNumber,pageSize);
+        }
+        protected Result Update(T t)
+        {
+            return Utility.Com.AmayerHelper.TryDo(m1 =>
+            {
+                // var chole = ChloeInit.Chole();
+                //var entity = GetSingle(m => m.Id == m1.Id);
+                db.TrackEntity(t);
+                // TinyMapper.Map(entity, m1);
+                return db.Update(t);
+
+            }, t);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <typeparam name="S"></typeparam>
-        /// <param name="offset">从第几页开始</param>
-        /// <param name="pageSize"></param>
-        /// <returns></returns>
-        public IQuery<T> Page<S>(int offset, int pageSize)
-        {
 
-            return tt.Skip(offset).Take(pageSize);
+        protected Result Update(Expression<Func<T, bool>> condition, Expression<Func<T, T>> content)
+        {
+            return Utility.Com.AmayerHelper.TryDo((m1, m2) =>
+            {
+                return db.Update(m1, m2);
+            }, condition, content);
+
         }
+
+
+
+
+
+
+
 
 
 

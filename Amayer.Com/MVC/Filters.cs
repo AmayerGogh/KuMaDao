@@ -11,8 +11,15 @@ namespace Amayer.Utility.Filters
     /// <summary>
     /// 
     /// </summary>
-    public  class Net2JsonFilter : ActionFilterAttribute
+    public  class JsonFormatterFilter : ActionFilterAttribute
     {
+        string desc { get; set; }
+        bool isTodoValid { get; set; }
+        public JsonFormatterFilter(string desc, bool isTodoValid = true)
+        {
+            this.desc = desc;
+            this.isTodoValid = isTodoValid;
+        }
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             filterContext.Result = new FilterExtension().Net2Json(filterContext.Result);
@@ -22,8 +29,6 @@ namespace Amayer.Utility.Filters
    
     class FilterExtension
     {
-      
-
         public ActionResult Net2Json(ActionResult Result)
         {
             //把 filterContext.Result从JsonResult换成JsonNetResult

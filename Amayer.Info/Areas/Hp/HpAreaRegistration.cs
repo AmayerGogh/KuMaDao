@@ -20,6 +20,7 @@ namespace Amayer.Info.Areas.Hp
                  defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                  namespaces: new string[] { "Amayer.Info.Areas.Hp.Controllers" }
             );
+           
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Amayer.Utility.Filters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,7 @@ namespace Amayer.Info.Controllers
 {
     public class BlogController : Controller
     {
+
         // GET: Blog
         public ActionResult Index()
         {

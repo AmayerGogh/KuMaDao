@@ -17,7 +17,7 @@ namespace Amayer.Utility
             var result = new Result();
             try
             {
-                result.Status = db(fc);
+                result.status = db(fc);
             }
             catch (Exception ex)
             {
@@ -34,12 +34,12 @@ namespace Amayer.Utility
             var result = new Result();
             try
             {
-                result.Status = db(id);
+                result.status = db(id);
             }
             catch (Exception ex)
             {
-                result.Status = -1;
-                result.Message = ex.ToString();
+                result.status = -1;
+                result.message = ex.ToString();
             }
             return result;
         }
@@ -49,12 +49,12 @@ namespace Amayer.Utility
             var result = new Result();
             try
             {
-                result.Status = db(o);
+                result.status = db(o);
             }
             catch (Exception ex)
             {
-                result.Status = -1;
-                result.Message = ex.ToString();
+                result.status = -1;
+                result.message = ex.ToString();
             }
             return result;
         }

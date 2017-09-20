@@ -1,7 +1,7 @@
 ﻿
 using Amayer.Info.CL.CRUD;
 using Amayer.Info.CL.Data;
-using Amayer.Info.CL.Models;
+
 using Chloe;
 using Chloe.SqlServer;
 using System;
@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,68 +21,120 @@ namespace test
         {
 
 
-            RunAsync<string>(() =>
+
+
+            foreach (var item in Assembly.Load("Amayer.Info").GetTypes())
             {
-                for (int i = 0; i < 100; i++)
-                {                   
-                    Console.WriteLine(i);
+                if (item.BaseType == typeof(Amayer.Info.Areas.Hp.Controllers.AdminController))
+                {
+                    System.Console.WriteLine("对了" + item.Name);
+                    foreach (var it in item.GetMethods())
+                    {
+                        foreach (var it_ in it.CustomAttributes)
+                        {
+                            if (it_.AttributeType.Name == typeof(Amayer.Utility.Filters.JsonFormatterFilter).Name)
+                            {
+                              
+                                System.Console.WriteLine(item.Name + "___" + it.Name + it_.ConstructorArguments[0].Value + "逮到你啦！！");
+                                continue;
+                            }
+                        }
+                    }
                 }
-                return "你好";
-            }, (dsf) =>
-            {
-                Console.WriteLine(dsf);
-            });
-
-
-            //    RunAsync<double>((1) => { Console.WriteLine(1); return 1; }, (1) => { Console.WriteLine(2); return 1; });
-
-            //  DisplayValue(); //这里不会阻塞  
-            Console.WriteLine("MyClass() End.");
+            }
 
 
 
 
-            Func<double, double, string> s = test;
-
-            var sdd = TryDo<string>((dfg) =>
-            {
-                Console.WriteLine(dfg);
-                return 1;
-            }, "e");
 
 
 
-            #region
-            //MsSqlContext db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
-            ////var db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
 
-            //////AdminMenu
-            ////IQuery<AdminMenu> q = db.Query<AdminMenu>();
-            ////var s = q.ToList();
-            ////foreach (var item in s)
-            ////{
-            ////    Console.WriteLine(item.Name);
-            ////}
-            ////  StudentSecond ss = Mapper<Student, StudentSecond>.Trans(s)；
-            //Student stu = new Student();
-            //stu.Id = 1;
-            //stu.Name = "你好";
-            //stu.Age = 12;
-            //stu.Gender = false;
-            //// var stuC = Mapper<Student, StudentViewModel>.Trans(stu);
 
-            //var en = new AdminMenuCRUD(db);
-            //var s = en.ListById<AdminMenu>(1);
-            //var ss = en.ListByWhere<AdminMenu>(m => m.Id != 0&&m.Id!=100).ToList();
-            //foreach (var item in ss)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //RunAsync<string>(() =>
             //{
-            //    Console.WriteLine(item.Id);
-            //}            
-            //var p = en.Page<AdminMenu>(2, 2).ToList();
-            //AdminMenu model = new AdminMenu();
-            //model.Name = "5";
-            //var mo = en.Insert<AdminMenu>(model);
-            #endregion
+            //    for (int i = 0; i < 100; i++)
+            //    {                   
+            //        Console.WriteLine(i);
+            //    }
+            //    return "你好";
+            //}, (dsf) =>
+            //{
+            //    Console.WriteLine(dsf);
+            //});
+
+
+            ////    RunAsync<double>((1) => { Console.WriteLine(1); return 1; }, (1) => { Console.WriteLine(2); return 1; });
+
+            ////  DisplayValue(); //这里不会阻塞  
+            //Console.WriteLine("MyClass() End.");
+
+
+
+
+            //Func<double, double, string> s = test;
+
+            //var sdd = TryDo<string>((dfg) =>
+            //{
+            //    Console.WriteLine(dfg);
+            //    return 1;
+            //}, "e");
+
+
+
+            //#region
+            ////MsSqlContext db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
+            //////var db = new MsSqlContext("data source=bds258291696.my3w.com;initial catalog=bds258291696_db;user id=bds258291696;password=12345687;");
+
+            ////////AdminMenu
+            //////IQuery<AdminMenu> q = db.Query<AdminMenu>();
+            //////var s = q.ToList();
+            //////foreach (var item in s)
+            //////{
+            //////    Console.WriteLine(item.Name);
+            //////}
+            //////  StudentSecond ss = Mapper<Student, StudentSecond>.Trans(s)；
+            ////Student stu = new Student();
+            ////stu.Id = 1;
+            ////stu.Name = "你好";
+            ////stu.Age = 12;
+            ////stu.Gender = false;
+            ////// var stuC = Mapper<Student, StudentViewModel>.Trans(stu);
+
+            ////var en = new AdminMenuCRUD(db);
+            ////var s = en.ListById<AdminMenu>(1);
+            ////var ss = en.ListByWhere<AdminMenu>(m => m.Id != 0&&m.Id!=100).ToList();
+            ////foreach (var item in ss)
+            ////{
+            ////    Console.WriteLine(item.Id);
+            ////}            
+            ////var p = en.Page<AdminMenu>(2, 2).ToList();
+            ////AdminMenu model = new AdminMenu();
+            ////model.Name = "5";
+            ////var mo = en.Insert<AdminMenu>(model);
+            //#endregion
             Console.ReadKey();
         }
 
@@ -164,6 +217,24 @@ namespace test
         }
 
     }
+
+
+
+
+    public class JsonAuth
+    {
+        public int Id { get; set; }
+        
+        //public int  { get; set; }
+        public string ControllerName { get; set; }
+        public string ActionName { get; set; }
+        public string Description { get; set; }
+
+       
+    }
+
+
+
 
     public class Student
     {

@@ -1,4 +1,5 @@
-﻿using Amayer.Info.CL.Models;
+﻿
+using Amayer.Info.CL.Entities;
 using Chloe;
 using Chloe.SqlServer;
 using Dapper;

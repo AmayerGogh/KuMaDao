@@ -1,5 +1,4 @@
-﻿using Amayer.Info.CL.Models;
-using Chloe;
+﻿using Chloe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +10,7 @@ namespace Amayer.Info.CL.IFactory
    public  interface IAdminMenuRepository
     {
 
-        IQuery<AdminMenu> GetListWhere();
+        //IQuery<AdminMenu> GetListWhere();
        
     }
 }

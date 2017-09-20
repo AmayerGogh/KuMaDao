@@ -6,6 +6,12 @@
 @section head{
     
      <link href="~/libs/css/plugins/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+    <style>
+        body{
+            background:#000;
+        }
+    </style>
+
     }
 @section scripts{
     <script src="~/libs/css/plugins/bootstrap-table/bootstrap-table.js"></script>
@@ -26,7 +32,7 @@
                 align: 'center',
                 valign: 'middle'
             },
-               { title: "货号", field: "id", },
+            { title: "货号", field: "id", order:"asc" },
                { title: "标题", field: "title" },
                { title: "描述", field: "descript", },
                { title: "日期", field: "createTime", },
@@ -36,6 +42,7 @@
 
            var table = $('#table').bootstrapTable({
                url: '/hp/article/getlist',
+               toolbar: '#toolbar',
                method: 'post',
                striped: true,
                pagination: true,
@@ -73,7 +80,7 @@
 
            function operateFormatter(value, row, index) {//赋予的参数
               // var s = row.OrderStatus;
-               return ' <div class="btn-group"><a class="btn btn-sm btn-dark" href="/hp/article/edit/'+row.id+'">查看</a><button class="btn btn-sm btn-dark  btn_seal">启售</button> </div>'
+               return ' <div class="btn-group"><a class="btn btn-xs btn-dark" href="/hp/article/edit/'+row.id+'">查看</a><button class="btn btn-xs btn-dark  btn_seal">启售</button> </div>'
            }
    
 
@@ -106,7 +113,28 @@
 <div style="height:2000px">         
  
     <div class="container-fluid" id ="list" style="margin-top: 100px;margin-bottom: 100px;">
+        <div id="toolbar" class="btn-group">
+            @*<div class="toolbar_item">
+                <a class="btn btn-primary" href="/article/edit/">添加</a>
+            </div>
         
+            <div class="toolbar_item">
+                <a class="btn btn-primary" href="/article/edit/">添加</a>
+                <label class="control-label">分类</label>
+                <select class="form-select drop_bsTable">
+                    <option>123213</option>
+                    <option>123213</option>
+                    <option>123213</option>
+                    <option>123213</option>
+                </select>
+              
+            </div>*@
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Left</button>
+                <button type="button" class="btn btn-default">Middle</button>
+                <button type="button" class="btn btn-default">Right</button>
+            </div>
+        </div>
         <table id="table"></table>
 
 

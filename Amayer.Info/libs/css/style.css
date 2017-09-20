@@ -58,9 +58,13 @@ a:focus {
     color: #ffffff;
 }
 
-.nav > li.active > a {
+/*.nav > li.active > a {
     color: #ffffff;
-}
+    /*background-color: #1f1f1f;
+    border: 0px;
+  
+}*/
+
 
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
@@ -204,7 +208,7 @@ body.body-small .navbar-top-links li:last-child {
     transition: all 0.5s;
 }
 
-.nav > li.active {
+#side-menu  > li.active {
     border-left: 2px solid #19aa8d;
     background: #2F2F2F;
 }
@@ -3693,12 +3697,12 @@ nav.page-tabs {
 }
 
 #content-main {
-    height: calc(100% - 92px);
+    /*height: calc(100% - 42px);*/
     overflow: hidden;
 }
 
 .fixed-nav #content-main {
-    height: calc(100% - 40px);
+    height:100%;
     overflow: hidden;
 }
 
@@ -3772,9 +3776,9 @@ nav.page-tabs {
     cursor: default;
 }*/
 
-.nav.nav-tabs li {
-    background: none;
-    border: none;
+
+.nav-tabs {
+    border-bottom: 0px;
 }
 
 .nav-tabs > li > a {
@@ -3943,8 +3947,10 @@ img.circle-border {
 
 .breadcrumb {
     padding: 0;
-    margin-top: 13px;
+    margin-top: 13px;    
+    margin-bottom: 12px;
     font-size: 18px;
+    background-color: rgba(245, 245, 245, 0);
 }
 
     .breadcrumb > li a {
@@ -7866,5 +7872,19 @@ body.skin-3 {
             font-size: 12px
         }
 }
+
+
+@font-face {
+    font-family: "Segoe MDL2 Assets";
+    font-style: normal;
+    font-weight: 400;
+    src: local("Segoe MDL2 Assets"), 
+        url("../fonts/segmdl2.eot"), 
+        url("../fonts/segmdl2.woff2") format("woff2"),
+        url("../fonts/segmdl2.woff") format("woff"), 
+        url("../fonts/segmdl2.svg#SegoeMDL2Assets") format("svg"),
+        url("../fonts/segmdl2.ttf") format("truetype");
+}
+
 
 

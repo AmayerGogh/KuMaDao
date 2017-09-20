@@ -40,7 +40,7 @@ namespace Amayer.Info.App_Start
                 return;
             }
             //需要手动获取Service对象
-           // IAdminUserService userService =DependencyResolver.Current.GetService<IAdminUserService>();
+            //IAdminUserService userService =DependencyResolver.Current.GetService<IAdminUserService>();
 
             //检查是否有权限
             //foreach (var permAtt in permAtts)

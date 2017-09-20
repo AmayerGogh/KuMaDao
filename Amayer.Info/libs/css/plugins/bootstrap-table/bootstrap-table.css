@@ -256,3 +256,39 @@ div.fixed-table-scroll-outer {
     overflow: hidden
 }
 
+
+
+table#table, table#table td, table#table th {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+    table#table tr:nth-child(1n) {
+        background: rgba(14, 13, 13, 0.6);
+    }
+
+    table#table th {
+        text-align: center;
+        vertical-align: middle;
+        border-collapse: collapse;
+        padding: 0px;
+        color: #fff;
+        background: #1ab394;
+        border: 1px solid #000;
+    }
+
+    table#table tbody {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    table#table tr:nth-child(2n) {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    table#table tr:hover {
+        background: rgba(14, 13, 13, 0.6);
+    }
+
+    table#table tr.selected {
+        background: #1ab394;
+    }

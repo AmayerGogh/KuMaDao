@@ -1,4 +1,5 @@
-﻿using Amayer.Info.CL.Models;
+﻿
+using Amayer.Info.CL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

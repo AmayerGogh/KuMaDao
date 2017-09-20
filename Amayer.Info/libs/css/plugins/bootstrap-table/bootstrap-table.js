@@ -278,7 +278,7 @@
     };
 
     BootstrapTable.DEFAULTS = {
-        classes: 'table table-hover',
+        classes: 'table',
         sortClass: undefined,
         locale: undefined,
         height: undefined,
@@ -628,7 +628,7 @@
 
         this.$el.addClass(this.options.classes);
         if (this.options.striped) {
-            this.$el.addClass('table-striped');
+          //  this.$el.addClass('table-striped');
         }
         if ($.inArray('table-no-bordered', this.options.classes.split(' ')) !== -1) {
             this.$tableContainer.addClass('table-no-bordered');

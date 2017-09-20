@@ -44,7 +44,7 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="Api\IPAddress.cs" />
     <Compile Include="Api\Weather.cs" />
+    <Compile Include="Com\AmayerHelper.cs" />
     <Compile Include="Com\Attachment.cs" />
     <Compile Include="Com\Configs.cs" />
     <Compile Include="Com\EncryptDecrypt.cs" />
@@ -99,9 +100,11 @@
     <Compile Include="Com\ValidateCode.cs" />
     <Compile Include="Com\XMLHelper.cs" />
     <Compile Include="Entity\Api.cs" />
+    <Compile Include="Entity\BsTableParam.cs" />
     <Compile Include="Entity\Result.cs" />
     <Compile Include="Entity\SelectItem.cs" />
     <Compile Include="Entity\UrlParameter.cs" />
+    <Compile Include="Extension\PredicateBuilder.cs" />
     <Compile Include="Image\Image.cs" />
     <Compile Include="Log4Net\Log.cs" />
     <Compile Include="Com\Attribute.cs" />
