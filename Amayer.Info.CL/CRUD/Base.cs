@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace Amayer.Info.CL.CRUD
 {
-    public class Base<T> where T : BaseEntity
+    public class Base<T>
     {
       
         private IDbContext db;
